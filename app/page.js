@@ -4,6 +4,7 @@ import { useEffect } from "react"
 
 
 
+
 export default function Home() {
   return (
     <main className={styles.detail_area}>

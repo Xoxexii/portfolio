@@ -11,6 +11,7 @@ import { useEffect } from "react"
 function Profile() {
   
   return (
+    <>
     <div className={styles.profile_background_area}>
         <div className={styles.profile_detail_area}>
           <Image  src={image}
@@ -66,6 +67,7 @@ function Profile() {
         </div>
         
     </div>
+    </>
   )
 }
 

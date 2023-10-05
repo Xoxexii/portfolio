@@ -1,4 +1,4 @@
-'use client';
+"use client"
 
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
 import './globals.css'
@@ -8,12 +8,13 @@ import Sidebar from '@/components/Sidebar/Sidebar'
 
 const inter = Inter({ subsets: ['latin'] })
 
+
 export default function RootLayout({ children }) {
   
   return (
-    
     <html lang="en" className={inter.className}>
       <body>
+        <title>Chanokchon</title>
         <Sidebar />
         {children}
         <ProgressBar
