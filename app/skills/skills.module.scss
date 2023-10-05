@@ -1,0 +1,263 @@
+.skills_background{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    left: 25vw;
+    width: 75vw;
+    height: 100vh;
+    background-color: #000000;
+    font-size: 72px;
+    color: white;
+}
+
+.skills_element:nth-child(1){
+    display: flex;
+    font-size: 3vw;
+    justify-content: center;
+    align-items: center;
+    animation: appear 0.6s ease-in-out forwards;
+}
+.skills_element:nth-child(2){
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    animation: appear 0.6s ease-in-out forwards;
+}
+.skills_element:nth-child(3){
+    display: flex;
+    font-size: 3vw;
+    justify-content: center;
+    align-items: center;
+    animation: appear 0.6s ease-in-out forwards;
+}
+.icon{
+    cursor: pointer;
+    opacity: 50%;
+    transition: 0.2s;
+}
+.icon:hover{
+    opacity: 100%;
+}
+.first_background{
+    position: absolute;    
+    width: 710px;
+    height: 630px;
+    
+    z-index: 2;
+    border-radius: 15px;
+    
+}.sec_background{
+    position: absolute;
+    width: 355px;
+    height: 555px;
+    left: -30px;
+    top: 60px;
+    z-index: -1;
+    border-radius:  15px;
+    font-size: 0.1em;
+    opacity: 0;
+    animation: disappear 0.6s ease-in-out forwards;
+}.third_background{
+    position: absolute;
+    width: 355px;
+    height: 555px;
+    opacity: 0;
+    right:  -30px;
+    z-index: -1;
+    top: 60px;
+    border-radius:15px;
+    font-size: 0.1em;
+    animation: disappear 0.6s ease-in-out forwards;
+}.first_background_left_clicked{
+    position: absolute;    
+    width: 710px;
+    height: 630px;
+    
+    z-index: 2;
+    border-radius: 15px;
+    animation: firstLeftClicked 0.55s ease-in-out forwards;
+
+}.third_background_left_clicked{
+    position: absolute;
+    width: 355px;
+    height: 555px;;
+    font-size: 0.1em;
+    right:  -30px;
+    z-index: -1;
+    top: 60px;
+    border-radius: 15px;
+    animation: thirdLeftClicked 0.55s ease-in-out forwards;
+}
+.sec_background_left_clicked{
+    position: absolute;
+    width: 355px;
+    height: 555px;
+    left: -30px;
+    top: 60px;
+    z-index: -1;
+    
+    border-radius: 15px ;
+    animation: secLeftClicked 0.55s ease-in-out forwards;
+}
+.first_background_right_clicked{
+    position: absolute;    
+    width: 710px;
+    height: 630px;
+    
+    z-index: 2;
+    border-radius: 15px;
+    animation: firstRightClicked 0.55s ease-in-out forwards;
+
+}.third_background_right_clicked{
+    position: absolute;
+    width: 355px;
+    height: 555px;
+    
+    right:  -30px;
+    z-index: -1;
+    top: 60px;
+    border-radius:15px ;
+    font-size: 0.1em;
+    animation: thirdRightClicked 0.55s ease-in-out forwards;
+}
+.sec_background_right_clicked{
+    position: absolute;
+    width: 355px;
+    height: 555px;
+    left: -30px;
+    top: 60px;
+    z-index: -1;
+    
+    border-radius: 15px ;
+    animation: secRightClicked 0.55s ease-in-out forwards;
+}
+#loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes firstLeftClicked {
+    from{
+        left: 20px;
+        top: 20px;
+        font-size: 1em;
+       
+    }to{
+        width: 355px;
+        height: 555px;
+        left: -30px;
+        top: 60px;
+        z-index: -1;
+        opacity: 0;
+        font-size: 0.1em;
+
+    }
+}
+@keyframes thirdLeftClicked {
+    from{
+        right: -30px;
+        top: 60px;
+        opacity: 0;
+        font-size: 0.5em;
+    }
+    to{
+        left: 20px;
+        top:20px;
+        width: 710px;
+        height: 630px;
+        z-index: 2;
+        opacity: 100%;
+        font-size: 1em;
+    }
+}
+@keyframes secLeftClicked {
+    from{
+        left: -30px;
+        opacity: 0;
+        
+    }
+    to{
+        left: 423.5px;
+        font-size: 0.1em;
+        opacity: 0;
+    }
+}
+@keyframes firstRightClicked {
+    from{
+        left: 20px;
+        top: 20px;
+        font-size: 1em;
+       
+    }to{
+        width: 355px;
+        height: 555px;
+        left: 423.5px;
+        top: 60px;
+        z-index: -1;
+        font-size: 0.1em;
+        opacity: 0;
+    }
+}
+@keyframes thirdRightClicked {
+    from{
+        right: -30px;
+        top: 60px;
+        opacity: 0;
+    }
+    to{
+        width: 355px;
+        height: 555px;
+        left: -30px;
+        top: 60px;
+        z-index: -1;
+        opacity: 0;
+    }
+}
+@keyframes secRightClicked {
+    from{
+        left: -30px;
+        opacity: 0;
+        font-size: 0.1em;
+    }
+    to{
+        left: 20px;
+        top:20px;
+        width: 710px;
+        height: 630px;
+        z-index: 2;
+        opacity: 100%;
+        font-size: 1em;
+    }
+}
+@keyframes appear {
+    0%{
+        opacity: 0%;
+        
+    }
+    100%{
+        
+    }
+}
+@keyframes disappear {
+    0%{
+        
+        
+    }
+    100%{
+        opacity: 0%;
+    }
+}

@@ -1,0 +1,498 @@
+@mixin resize($height){
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: $height;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 15px;
+    animation: appear 0.6s ease-in-out forwards;
+}
+.com_background{
+    @include resize(100%)
+}
+.comlan_background{
+    display: grid;
+    grid-template-rows:75% 25%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    width: auto;
+    height: 100%;
+    
+    border-radius: 15px;
+}
+.front_background{
+    display: grid;
+    grid-template-rows: 75% 25%;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    width: auto;
+    height: 100%;
+    
+    border-radius: 15px;
+}
+.back_background{
+    display: grid;
+    grid-template-rows: 75% 25%;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: auto;
+    height: 100%;
+    
+    border-radius: 15px;
+}
+.tooltip_html{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    border: 2px solid white;
+    text-align: center;
+    top: -40px;
+    left: -5px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+}
+.tooltip_html::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+  .tooltip_css{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: 0px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+}
+.tooltip_css::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+  .tooltip_js{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: -31px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+}
+.tooltip_js::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+    
+  }
+  .tooltip_ts{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: -31px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+    
+}
+.tooltip_ts::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+  .tooltip_php{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: 0;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+    
+}
+.tooltip_php::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+  .tooltip_cs{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: 4px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+    
+}
+.tooltip_cs::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+  .tooltip_java{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: -2px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+    
+}
+.tooltip_java::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+.comlan_background_element:nth-child(1){
+    background-color: black;
+    font-size: 80%;
+}
+.comlan_background_element:nth-child(2){
+    display: flex;
+    width: auto;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    font-size: 1em;
+
+}
+.child{
+    position: relative;
+    font-size: 0.5em;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 80%;
+    cursor: pointer;
+}
+.child_icon{
+    transition: 0.1s ease-in-out;
+}
+.comlan_background_element:nth-child(2) .child_icon:hover{
+    transform: scaley(1.3)scalex(1.3);
+
+}
+.child_icon:hover~span{
+    visibility: visible;
+}
+
+.front_background_element:nth-child(1){
+    background-color: black;
+    font-size: 3.5rem;
+    
+
+}
+.front_background_element:nth-child(2){
+    display: flex;
+    width: auto;
+    height: auto;
+    background-color: black;
+    align-items: center;
+    
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.tooltip_next{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: -5px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+}
+.tooltip_next::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 35%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+.tooltip_react{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: -20px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+}
+.tooltip_react::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+    
+  }
+  .tooltip_redux{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: -12px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+}
+.tooltip_redux::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }.tooltip_bs{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: -32px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+}
+.tooltip_bs::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }.tooltip_tail{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: -20px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+}
+.tooltip_tail::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+  .tooltip_sass{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: -5px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+}
+.tooltip_sass::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+.front_background_element:nth-child(2) .child_icon:hover{
+    transform: scaley(1.3)scalex(1.3);
+
+}
+.back_background_element:nth-child(1){
+    background-color: black;
+    font-size: 3.5rem;
+}
+.back_background_element:nth-child(2){
+    display: flex;
+    width: auto;
+    height: auto;
+    background-color: black;
+    align-items: center;
+    border-top: 1px solid white;
+}
+.tooltip_node{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: -5px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+}
+.tooltip_node::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+  .tooltip_express{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: -30px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+}
+.tooltip_express::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+  .tooltip_laravel{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: -20px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+}
+.tooltip_laravel::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+.tooltip_net{
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(6, 6, 6);
+    text-align: center;
+    top: -40px;
+    left: -20px;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    border: 2px solid white;
+}
+.tooltip_net::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+.back_background_element:nth-child(2) .child_icon:hover{
+    transform: scaley(1.3)scalex(1.3);
+
+}
