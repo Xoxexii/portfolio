@@ -14,6 +14,7 @@ export default function Sidebar() {
 
   
   const[name,SetName] = useState('topic_template')
+  const[id,SetId] = useState('topic_template')
 
   const pathname = usePathname()
   
@@ -22,38 +23,67 @@ export default function Sidebar() {
   
   
   const click = (id) =>{
-    var header = document.getElementById("topic_area");
-    var btns = header.getElementsByClassName("topic_template");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function() {
-      var current = document.getElementsByClassName("active");
-      if (current.length > 0) { 
-        current[0].className = current[0].className.replace(" active", "");
-      }
-      this.className += " active";
-      });
+    var link = document.getElementsByClassName("topic_template")
+    for(let i=0; i < link.length;i++){
+      link[i].className = name;
     }
+    if(id == 0){
+      link[0].className += ' active';
+    }else if(id == 1){
+      link[1].className += ' active';
+    }else if(id == 2){
+      link[2].className += ' active';
+    }
+    else if(id == 3){
+      link[3].className += ' active';
+    }
+    
 }
 
 useEffect((()=>{
-  click()
+  
 }),)
   return (
-    <div>
-      <div className="topic_area" id="topic_area">
-        {value.map((val)=>
+    <div className="topic_area" id="topic_area">
+      <div className="button_area">
         
-          <Link href={val.href} className={name} key={val.id}  onClick={()=> click()}>
-            <div>
-              {val.name}
+        
+          <Link href='/profile' className={name}  id={id} onClick={()=>click(0)}>
+            <div className='name'>
+              Profile
             </div>
             <div className='icon'>
               <GoChevronRight />
             </div>
           </Link>
+          <Link href='/education' className={name}  id={id} onClick={()=>click(1)}>
+          <div className='name'>
+            Education
+          </div>
+          <div className='icon'>
+            <GoChevronRight />
+          </div>
+        </Link>
+        <Link href='/skills' className={name} id={id} onClick={()=>click(2)}>
+        <div className='name'>
+          Skills
+        </div>
+        <div className='icon'>
+          <GoChevronRight />
+        </div>
+      </Link>
+      <Link href='/experiences' className={name} id={id} onClick={()=>click(3)}>
+      <div className='name'>
+        Experiences
+      </div>
+      <div className='icon'>
+        <GoChevronRight />
+      </div>
+    </Link>
+    
           
         
-        )}
+        
       
       </div>
     </div>
