@@ -5,24 +5,82 @@
     width: 75vw;
     height: 100vh;
     background-color: #000000;
-    font-size: 72px;
-    color: white;
     align-items: center;
+    justify-content: center;
     
 }
 .start{
     position: absolute;
-    font-size: 30px;
-    animation: name .75s linear forwards;
-    left: 350px;
-    opacity: 0;
+    font-size: calc(10% + 2vw);
+    color: white;
+    animation: name 1.5s ease none;
+    
 }
 @keyframes name {
     from{
-        left: 240px;
+        left: 230px;
+        opacity: 0%;
     }
     to{
-        left:225px;
         opacity: 100%;
+        left: 198px;
+    }
+}
+@media screen and (max-width:429px) {
+    .detail_area{
+        position: absolute;
+        display: flex;
+        width: 100vw;
+        height: 85vh;
+        left: 0;
+        top: 15vh;
+        background-color: #000000;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .start{
+        position: absolute;
+        font-size: calc(40% + 2vw);
+        color: white;
+        animation: name 1.5s ease none;
+        
+    }
+    @keyframes name {
+        from{
+            opacity: 0%;
+        }
+        to{
+            opacity: 100%;
+        }
+    }
+}
+@media screen and (max-width:361px) {
+    .detail_area{
+        position: absolute;
+        display: flex;
+        width: 100vw;
+        height: 85vh;
+        left: 0;
+        top: 15vh;
+        background-color: #000000;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .start{
+        position: absolute;
+        font-size: calc(40% + 2vw);
+        color: white;
+        animation: name 1.5s ease none;
+        
+    }
+    @keyframes name {
+        from{
+            opacity: 0%;
+        }
+        to{
+            opacity: 100%;
+        }
     }
 }

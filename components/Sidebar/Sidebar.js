@@ -19,7 +19,22 @@ export default function Sidebar() {
   const pathname = usePathname()
   
   
-
+ const reload = () =>{
+  var link = document.getElementsByClassName("topic_template")
+    for(let i=0; i < link.length;i++){
+      link[i].className = name;
+    }
+  if(pathname == '/profile'){
+    link[0].className += ' active';
+  }else if(pathname == '/education'){
+    link[1].className += ' active';
+  }else if(pathname == '/skills'){
+    link[2].className += ' active';
+  }
+  else if(pathname == '/experiences'){
+    link[3].className += ' active';
+  }
+ }
   
   
   const click = (id) =>{
@@ -41,7 +56,7 @@ export default function Sidebar() {
 }
 
 useEffect((()=>{
-  
+  reload();
 }),)
   return (
     <div className="topic_area" id="topic_area">
@@ -50,7 +65,7 @@ useEffect((()=>{
         
           <Link href='/profile' className={name}  id={id} onClick={()=>click(0)}>
             <div className='name'>
-              Profile
+              Profile 
             </div>
             <div className='icon'>
               <GoChevronRight />
