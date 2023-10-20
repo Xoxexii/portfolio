@@ -12,96 +12,192 @@ import Lan from './component/lan'
 
 function Skills() {
   
-  const[first,SetFirst] = useState(styles.first_background);
-  const[sec,SetSec] = useState(styles.sec_background);
-  const[third,SetThird] = useState(styles.third_background);
-  const[loader,setLoading] = useState("loading")
+  const[status,setStatus] = useState("com_center");
+  const[center,setCenter] = useState(styles.center_card);
+  const[right,setRight] = useState(styles.right_card);
+  const[left,setLeft] = useState(styles.left_card);
+  const[l_detail,setL] = useState(<Hob />);
+  const[c_detail,setC] = useState(<Com />);
+  const[r_detail,setR] = useState(<Lan />);
   
   const rightClick =  () =>{
-    if(first == styles.first_background){
-
-      SetFirst(styles.first_background_left_clicked)
-      SetSec(styles.sec_background_left_clicked)
-      SetThird(styles.third_background_left_clicked)
-      setTimeout(() => {
-              SetFirst(styles.sec_background)
-              SetSec(styles.third_background)
-              SetThird(styles.first_background)
-            }, 550);
-    }if(third == styles.first_background){
-  
-      SetFirst(styles.sec_background_left_clicked)
-      SetSec(styles.third_background_left_clicked)
-      SetThird(styles.first_background_left_clicked)
-      setTimeout(() => {
-        SetFirst(styles.third_background)
-        SetSec(styles.first_background)
-        SetThird(styles.sec_background)
-      }, 550);
-    }if(sec == styles.first_background){
-  
-      SetFirst(styles.third_background_left_clicked)
-      SetSec(styles.first_background_left_clicked)
-      SetThird(styles.sec_background_left_clicked)
-      setTimeout(() => {
-        SetFirst(styles.first_background)
-        SetSec(styles.sec_background)
-        SetThird(styles.third_background)
-      }, 550);
-      
+    if(status == "com_center"){
+      var third = document.getElementById('right');
+    var fisrt = document.getElementById('center');
+    var second = document.getElementById('left');
+    setCenter(styles.center_card_right_move)
+    setRight(styles.right_card_right_move)
+    setLeft(styles.left_card_right_move)
+    setTimeout(() => {
+      fisrt.style.zIndex = "2";
+      third.style.zIndex = "3";
+      second.style.zIndex = "1";
+    }, 800);
+    setTimeout(() => {
+      setStatus("lan_center")
+      setCenter(styles.center_card)
+      setRight(styles.right_card)
+      setLeft(styles.left_card)
+      setL(<Com />)
+      setC(<Lan />)
+      setR(<Hob />)
+      fisrt.style.zIndex = "3";
+      third.style.zIndex = "2"
+      second.style.zIndex = "1";
+    }, 1300);
     }
-  }
-  const leftClick =  () =>{
-  if(first == styles.first_background){
-    SetFirst(styles.first_background_right_clicked)
-    SetSec(styles.sec_background_right_clicked)
-    SetThird(styles.third_background_right_clicked)
-        setTimeout(() => {
-          SetFirst(styles.third_background)
-          SetSec(styles.first_background)
-          SetThird(styles.sec_background)
-        }, 550);
-  }
-  if(sec == styles.first_background){
-    SetFirst(styles.third_background_right_clicked)
-    SetSec(styles.first_background_right_clicked)
-    SetThird(styles.sec_background_right_clicked)
-        setTimeout(() => {
-          SetFirst(styles.sec_background)
-          SetSec(styles.third_background)
-          SetThird(styles.first_background)
-        }, 550);
-  }
-  if(third == styles.first_background){
-    SetFirst(styles.sec_background_right_clicked)
-    SetSec(styles.third_background_right_clicked)
-    SetThird(styles.first_background_right_clicked)
-        setTimeout(() => {
-          SetFirst(styles.first_background)
-          SetSec(styles.sec_background)
-          SetThird(styles.third_background)
-        }, 550);
-  }
+    if(status == "lan_center"){
+    var third = document.getElementById('right');
+    var fisrt = document.getElementById('center');
+    var second = document.getElementById('left');
+    setCenter(styles.center_card_right_move)
+    setRight(styles.right_card_right_move)
+    setLeft(styles.left_card_right_move)
+    setTimeout(() => {
+      fisrt.style.zIndex = "2";
+      third.style.zIndex = "3";
+      second.style.zIndex = "1";
+    }, 800);
+    setTimeout(() => {
+      setStatus("hob_center")
+      setCenter(styles.center_card)
+      setRight(styles.right_card)
+      setLeft(styles.left_card)
+      setL(<Lan />)
+      setC(<Hob />)
+      setR(<Com />)
+      fisrt.style.zIndex = "3";
+      third.style.zIndex = "2"
+      second.style.zIndex = "1";
+    }, 1300);
+    }
+    if(status == "hob_center"){
+      var third = document.getElementById('right');
+    var fisrt = document.getElementById('center');
+    var second = document.getElementById('left');
+    setCenter(styles.center_card_right_move)
+    setRight(styles.right_card_right_move)
+    setLeft(styles.left_card_right_move)
+    setTimeout(() => {
+      fisrt.style.zIndex = "2";
+      third.style.zIndex = "3";
+      second.style.zIndex = "1";
+    }, 800);
+    setTimeout(() => {
+      setStatus("com_center")
+      setCenter(styles.center_card)
+      setRight(styles.right_card)
+      setLeft(styles.left_card)
+      setL(<Hob />)
+      setC(<Com />)
+      setR(<Lan />)
+      fisrt.style.zIndex = "3";
+      third.style.zIndex = "2"
+      second.style.zIndex = "1";
+    }, 1300);
+    }
+  
 }
-useEffect((()=>{
-    setLoading(document.readyState)
-   }),[])
+const leftClick =  () =>{
+  if(status == "com_center"){
+  var third = document.getElementById('right');
+  var fisrt = document.getElementById('center');
+  var second = document.getElementById('left');
+  setCenter(styles.center_card_left_move)
+  setRight(styles.right_card_left_move)
+  setLeft(styles.left_card_left_move)
+  setTimeout(() => {
+    fisrt.style.zIndex = "2";
+    third.style.zIndex = "1";
+    second.style.zIndex = "3";
+  }, 500);
+  setTimeout(() => {
+    setStatus("hob_center")
+    setCenter(styles.center_card)
+    setRight(styles.right_card)
+    setLeft(styles.left_card)
+    setL(<Lan />)
+    setC(<Hob />)
+    setR(<Com />)
+    fisrt.style.zIndex = "3";
+    third.style.zIndex = "2"
+    second.style.zIndex = "1";
+  }, 1300);
+  }
+  if(status == "hob_center"){
+  var third = document.getElementById('right');
+  var fisrt = document.getElementById('center');
+  var second = document.getElementById('left');
+  setCenter(styles.center_card_left_move)
+  setRight(styles.right_card_left_move)
+  setLeft(styles.left_card_left_move)
+  setTimeout(() => {
+    fisrt.style.zIndex = "2";
+    third.style.zIndex = "1";
+    second.style.zIndex = "3";
+  }, 500);
+  setTimeout(() => {
+    setStatus("lan_center")
+    setCenter(styles.center_card)
+    setRight(styles.right_card)
+    setLeft(styles.left_card)
+    setL(<Com />)
+    setC(<Lan />)
+    setR(<Hob />)
+    fisrt.style.zIndex = "3";
+    third.style.zIndex = "2"
+    second.style.zIndex = "1";
+  }, 1300);
+  }
+  if(status == "lan_center"){
+    var third = document.getElementById('right');
+  var fisrt = document.getElementById('center');
+  var second = document.getElementById('left');
+  setCenter(styles.center_card_left_move)
+  setRight(styles.right_card_left_move)
+  setLeft(styles.left_card_left_move)
+  setTimeout(() => {
+    fisrt.style.zIndex = "2";
+    third.style.zIndex = "1";
+    second.style.zIndex = "3";
+  }, 500);
+  setTimeout(() => {
+    setStatus("com_center")
+    setCenter(styles.center_card)
+    setRight(styles.right_card)
+    setLeft(styles.left_card)
+    setL(<Hob />)
+    setC(<Com />)
+    setR(<Lan />)
+    fisrt.style.zIndex = "3";
+    third.style.zIndex = "2"
+    second.style.zIndex = "1";
+  }, 1300);
+  }
+
+}
+
  
   
   return (
     <>
     <div className={styles.skills_background} >
-    <div className={styles.skills_element}>
-      <div className={styles.icon}><GoChevronLeft onClick={()=>leftClick()}/></div>
-    </div>
-    <div className={styles.skills_element}>
-      <div className={sec}><Hob /></div>
-      <div className={first}><Com /></div>
-      <div className={third}><Lan/> </div>
+    <div className={styles.skills_element_left}></div>
+    <div className={styles.skills_element_center}>
+      
+        <div className={styles.left_card_area} id='left'>
+          <div className={left} onClick={()=>leftClick()}>{l_detail}</div>
+        </div>
+        <div className={styles.center_card_area} id='center'>
+          <div className={center}>{c_detail}</div>
+        </div>
+        <div className={styles.right_card_area} id='right'>
+          <div className={right} onClick={()=>rightClick()}>{r_detail}</div>
+        </div>
+        
+        
     </div> 
-    <div className={styles.skills_element}>
-      <div className={styles.icon}><GoChevronRight  onClick={()=>rightClick()}/></div>
-    </div>
+    <div className={styles.skills_element_right}></div>
   </div>
   
 </>

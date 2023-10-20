@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./experience.module.scss"
 import { MdOutlineKeyboardDoubleArrowLeft,MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import { BiSolidRightArrow } from "react-icons/bi";
 import technimal from '../../image/technimal.png'
 import frame from '../../image/frame.png'
 import frame_2 from '../../image/frame_2.png'
@@ -21,6 +22,7 @@ function Experiences() {
   const[image,setImage] = useState(styles.image_container)
   const[image2,setImage2] = useState(styles.image2_container)
   const[image3,setImage3] = useState(styles.image3_container)
+  const[arrow,setArrow] = useState(styles.arrow1)
   
   const[imageStatus,setImageStatus] = useState(1)
   const[image2Status,setImage2Status] = useState(1)
@@ -32,6 +34,7 @@ function Experiences() {
 
   const Active = () => {
     if(card == 1){
+      setArrow(styles.arrow1)
       var link = document.getElementsByClassName(styles.image_button)
     for(let i=0; i < link.length;i++){
       link[i].className = styles.image_button;
@@ -53,6 +56,7 @@ var link = document.getElementsByClassName(styles.button)
     
     }
     if(card == 2){
+      setArrow(styles.arrow2)
       var link = document.getElementsByClassName(styles.image2_button)
     for(let i=0; i < link.length;i++){
       link[i].className = styles.image2_button;
@@ -66,6 +70,7 @@ var link = document.getElementsByClassName(styles.button)
 }
     }
     if(card == 3){
+      setArrow(styles.arrow3)
       var link = document.getElementsByClassName(styles.image3_button)
     for(let i=0; i < link.length;i++){
       link[i].className = styles.image3_button;
@@ -83,6 +88,7 @@ var link = document.getElementsByClassName(styles.button)
   }
   const Click = (param) => {
     if(card == 1){
+      setArrow(styles.arrow1)
       if(param == 'left'){
         if(imageStatus == 2){
           setImage(styles.image_container)
@@ -101,6 +107,7 @@ var link = document.getElementsByClassName(styles.button)
         }
       }
     }else if(card == 2){
+      setArrow(styles.arrow2)
       if(param == 'left'){
         if(image2Status == 2){
           setImage2(styles.image2_container)
@@ -119,6 +126,7 @@ var link = document.getElementsByClassName(styles.button)
         }
       }
     }else if(card == 3){
+      setArrow(styles.arrow3)
       if(param == 'left'){
         if(image3Status == 2){
           setImage3(styles.image3_container)
@@ -204,7 +212,9 @@ var link = document.getElementsByClassName(styles.button)
   return (
     <>
     <div className={styles.ex_background} onWheel={()=>{wheel()}}>
-          <div className={styles.background_element_left}></div>
+          <div className={styles.background_element_left}>
+            <BiSolidRightArrow className={arrow}/>
+          </div>
           <div className={styles.background_element_center}>
               <div className={background}>
                   <div className={styles.first_card_area}>

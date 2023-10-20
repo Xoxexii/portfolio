@@ -67,33 +67,25 @@ useEffect((()=>{
             <div className='name'>
               Profile 
             </div>
-            <div className='icon'>
-              <GoChevronRight />
-            </div>
+            
           </Link>
           <Link href='/education' className={name}  id={id} onClick={()=>click(1)}>
           <div className='name'>
             Education
           </div>
-          <div className='icon'>
-            <GoChevronRight />
-          </div>
+          
         </Link>
         <Link href='/skills' className={name} id={id} onClick={()=>click(2)}>
         <div className='name'>
           Skills
         </div>
-        <div className='icon'>
-          <GoChevronRight />
-        </div>
+        
       </Link>
       <Link href='/experiences' className={name} id={id} onClick={()=>click(3)}>
       <div className='name'>
         Experiences
       </div>
-      <div className='icon'>
-        <GoChevronRight />
-      </div>
+      
     </Link>
     
           

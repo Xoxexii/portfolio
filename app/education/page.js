@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import "./education.css"
+import styles from "./education.module.scss"
 import image2 from '../../image/brr.png'
 import image3 from '../../image/kmitl.png'
 import Image from 'next/image'
@@ -9,104 +9,209 @@ import { useEffect } from 'react'
 
 
 function Education() {
-  const[background,setBackground] = useState('education_school_area')
-  const[child,setChild] = useState('education_school_element')
-  const[loading,setLoading] = useState("loading")
+  const[background,setBackground] = useState(styles.edu_background)
+  const[buttonArea,setButtonArea] = useState(styles.button_area)
+  const[brrChoose,setBrrChoose] = useState(styles.brr_image)
+  const[kmitlChoose,setKmitlChoose] = useState(styles.kmitl_image)
+  const[brr,setBrr] = useState(styles.brr_detail)
+  const[kmitl,setKmitl] = useState(styles.kmitl_detail)
   
-  const clickBrr = () =>{
-    setBackground('education_school_area_change');
-    setChild('education_school_element_brr_change');
-    setTimeout(() => {
-      const t = document.querySelector(".education_school_element_brr_change:nth-child(2)").style.visibility = 'hidden';
-    }, 500);
-    
+  const click = (param) =>{
+    if(param == 'brr'){
+      setBrrChoose(styles.brr_brr_image_move)
+      setKmitlChoose(styles.brr_kmitl_image_move)
+      setTimeout(() => {
+        setBackground(styles.edu_background_change)
+        setButtonArea(styles.button_area_brr)
+        setBrrChoose(styles.brr_change_image)
+        setKmitlChoose(styles.kmitl_image)
+      }, 650);
+      
+      
+      
+    }else if(param == "kmitl"){
+      setBrrChoose(styles.kmitl_brr_image_move)
+      setKmitlChoose(styles.kmitl_kmitl_image_move)
+      setTimeout(() => {
+        setBackground(styles.edu_background_change)
+        setButtonArea(styles.button_area_kmitl)
+        setKmitlChoose(styles.kmitl_change_image)
+        setBrrChoose(styles.brr_kmitl)
+      }, 650);
+    }
   
-
-    
 }
     
   
-  const clickKmitl = () =>{
-    setBackground('education_school_area_change')
-    setChild('education_school_element_kmitl_change')
+const back = (param) =>{
+  if(param == 'brr'){
+    setBrrChoose(styles.brr_change_image_back)
+    setBrr(styles.brr_detail_back)
     setTimeout(() => {
-      const t = document.querySelector(".education_school_element_kmitl_change:nth-child(1)").style.visibility = 'hidden';
-    }, 500);
+      setBackground(styles.edu_background)
+      setButtonArea(styles.button_area)
+      setBrrChoose(styles.brr_image)
+      setKmitlChoose(styles.kmitl_image)
+      setBrr(styles.brr_detail)
+    }, 650);
+
+  } else if(param == 'kmitl'){
+    setKmitlChoose(styles.kmitl_change_image_back)
+    setBrrChoose(styles.kmitl_brr_back)
+    setKmitl(styles.kmitl_detail_back)
+    setTimeout(() => {
+      setBackground(styles.edu_background)
+      setButtonArea(styles.button_area)
+      setKmitlChoose(styles.kmitl_image)
+      setBrrChoose(styles.brr_image)
+      setKmitl(styles.kmitl_detail)
+    }, 650);
+  }
+  
     
   }
-  const backBrr = () =>{
-    setBackground('education_school_area')
-    setChild('education_school_element_brr_back')
-    setTimeout(() => {
-      const t = document.querySelector(".education_school_element_brr_back:nth-child(2)").style.visibility = 'visible';
-    },);
-  }
-  const backKmitl = () =>{
-    setBackground('education_school_area')
-    setChild('education_school_element_kmitl_back')
-    setTimeout(() => {
-      const t = document.querySelector(".education_school_element_kmitl_back:nth-child(1)").style.visibility = 'visible';
-    },);
-  }
-   useEffect((()=>{
-    setLoading(document.readyState)
-   }),[])
   
 
   return (
     <>
-  
-    <div className={'education_background_area'}>
-      <div className={'education_detail_area'}>
-          {background === 'education_school_area'? 
-          <div className={background} id='education_school_area'>
-            <Image  src={image2} alt="Picture of the author" className={child}  id='first' onClick={()=>clickBrr()} priority={false}/>
-            <Image  src={image3} alt="Picture of the author" className={child}  id='second' onClick={()=>clickKmitl()} priority={true}/>
-            </div>
-          : <div className={background} id='education_school_area'>
-            <Image  src={image2} alt="Picture of the author" className={child}  id='first'priority={false}/>
-            <Image  src={image3} alt="Picture of the author" className={child}  id='second'priority={true}/>
-          </div>
-         } 
-          {background === 'education_school_area_change' ? child === 'education_school_element_brr_change'? <GoArrowLeft onClick={()=>backBrr()} className='backIconBrr'/>: <GoArrowLeft onClick={()=>backKmitl()} className='backIconKmitl' /> : <div></div>}
-          {background === 'education_school_area_change' ? child === 'education_school_element_brr_change'? 
-          <div className='detail-brr'>
-            <div className='detail-brr_element'>
-              <div className='detail-brr_element_child'><span style={{opacity:1,color:'#87CEFA'}}>- Junior High School -<br /> ( Grade 7-9 ) </span><br />Benchamaratcharangsarit School</div>
-              <div className='detail-brr_element_child'><span style={{opacity:1,color:'yellow'}}>- Program -<br /></span>Gifted<br />Mathemetics and Sciences Program</div>
-              <div className='detail-brr_element_child'><span style={{opacity:1,color:'#87CEFA'}}>- GPAX -</span><br />3.31</div>
-            </div>
-            <div className='detail-brr_element'>
-              <div className='detail-brr_element_child'><span style={{opacity:1,color:'#87CEFA'}}>- Senior High School -<br /> ( Grade 10-12 ) </span><br />Benchamaratcharangsarit School</div>
-              <div className='detail-brr_element_child'><span style={{opacity:1,color:'yellow'}}>- Program -<br /></span>Gifted<br />Mathemetics and Sciences Program</div>
-              <div className='detail-brr_element_child'><span style={{opacity:1,color:'#87CEFA'}}>- GPAX -</span><br />3.23</div>
-            </div>
-          </div>
-          : <div className='detail-kmitl'>
-              <div className='detail-kmitl_element'>
-                <div className='detail-kmitl_element_child'><span style={{opacity:1,color:'#C74A19'}}>- Degree -</span><br />Bachelor's Degrees</div>
-                <div className='detail-kmitl_element_child'><span style={{opacity:1,color:'#C74A19'}}>- University -<br /></span>King Mongkut's Institute of Technology Ladkrabang<br/>( KMITL )</div>
-                <div className='detail-kmitl_element_child'><span style={{opacity:1,color:'#C74A19'}}>- Major -<br /></span>Faculty of Engineering</div>
-                <div className='detail-kmitl_element_child'><span style={{opacity:1,color:'#C74A19'}}>- Minor -</span><br />Electronics Engineering</div>
-              </div>
-              <div className='detail-kmitl_element'>
-                <div className='detail-brr_element_child'><span style={{opacity:1,color:'#C74A19'}}>- GPAX -</span><br />2.76</div>
-                <div className='detail-brr_element_child'>
-                  <div style={{opacity:1,color:'#C74A19'}}>
-                    - Greduated Project -
+      <div className={background}>
+        {buttonArea === styles.button_area ? 
+          <div className={styles.button_area}>
+            <div className={brrChoose}><Image  src={image2} alt="Picture of the author"   onClick={()=>click('brr')} priority={true}/></div>
+            <div className={kmitlChoose}><Image  src={image3} alt="Picture of the author"   onClick={()=>click('kmitl')} priority={true}/></div>
+            
+            
+            
+          </div> : buttonArea === styles.button_area_brr ?
+          <div className={styles.button_area_brr}>
+            <div className={brrChoose}><Image  src={image2} alt="Picture of the author"   onClick={()=>back('brr')} priority={true}/></div>
+          </div> : 
+          <div className={styles.button_area_kmitl}>
+            <div className={kmitlChoose}><Image  src={image3} alt="Picture of the author"   onClick={()=>back('kmitl')} priority={true}/></div>
+            
+          </div> 
+        }
+        <div className={styles.detail_area}>
+          {buttonArea === styles.button_area_brr ? 
+          <div className={brr}>
+            <div className={styles.detail_brr_element}>
+                <div className={styles.left_element}>
+                  <div className={styles.head} style={{color:'#3D4EA7'}}>
+                    <div>- Junior High School -</div>
+                    <div>( Grade 7-9 )</div>
                   </div>
-                  <div style={{marginTop:10}}>
-                  Smart Greenhouse ( IOT )
-                  <li style={{fontSize:16}}>Coding C language for command on microprocessor to detect values and send values over the internet by MQTT protocol and get values in MQTT broker and send data to mySQL database by Node-red flow on Node.js</li>
-                  <li style={{fontSize:16}}>Build React.js to show dashboards that include real-time data, graphs and buttons that command devices in the greenhouse.</li>
+                  <div className={styles.detail}>
+                    Benchamaratcharangsarit School
                   </div>
                 </div>
-              </div>
-          </div> 
+                <div className={styles.left_element}>
+                  <div className={styles.head} style={{color:'#FED686'}}>
+                    <div>- Program -</div>
+                    <div>( Gifted )</div>
+                  </div>
+                  <div className={styles.detail}>
+                  Mathemetics and Sciences Program
+                  </div>
+                </div>
+                <div className={styles.left_element}>
+                  <div className={styles.head}>
+                    <div style={{color:'#3D4EA7'}}>- GPAX -</div>
+                  </div>
+                  <div className={styles.detail}>
+                    3.31
+                  </div>
+                </div>
+            </div>
+            <div className={styles.detail_brr_element}>
+              <div className={styles.right_element}>
+                  <div className={styles.head} style={{color:'#FED686'}}>
+                    <div>- Senior High School -</div>
+                    <div>( Grade 10-12 )</div>
+                  </div>
+                  <div className={styles.detail}>
+                    Benchamaratcharangsarit School
+                  </div>
+                </div>
+                <div className={styles.right_element}>
+                  <div className={styles.head} style={{color:'#3D4EA7'}}>
+                    <div>- Program -</div>
+                    <div>( Gifted )</div>
+                  </div>
+                  <div className={styles.detail}>
+                  Mathemetics and Sciences Program
+                  </div>
+                </div>
+                <div className={styles.right_element}>
+                  <div className={styles.head} style={{color:'#FED686'}}>
+                    <div>- GPAX -</div>
+                  </div>
+                  <div className={styles.detail}>
+                    3.23
+                  </div>
+                </div>
+            </div>
+          </div> : buttonArea === styles.button_area_kmitl ?
+          <div className={kmitl}>
+            <div className={styles.detail_kmitl_element}>
+                <div className={styles.left_element}>
+                  <div className={styles.head} style={{color:'#C74A19'}}>
+                    <div>- Degree -</div>
+                  </div>
+                  <div className={styles.detail}>
+                    Bachelor's Degrees
+                  </div>
+                </div>
+                <div className={styles.left_element}>
+                  <div className={styles.head} style={{color:'#C74A19'}}>
+                    <div>- University -</div>
+                    <div style={{display:'flex',justifyContent:'center',fontSize:'calc(2.5vw - 2.5vh)',color:'white'}}>King Mongkut's Institute of Technology Ladkrabang</div>
+                  </div>
+                  <div className={styles.detail}>
+                  <div>( KMITL )</div>
+                  </div>
+                </div>
+                <div className={styles.left_element}>
+                  <div className={styles.head} style={{color:'#C74A19'}}>
+                    <div>- Major -</div>
+                  </div>
+                  <div className={styles.detail}>
+                  Faculty of Engineering
+                  </div>
+                </div>
+                <div className={styles.left_element}>
+                  <div className={styles.head} style={{color:'#C74A19'}}>
+                    <div>- Minor -</div>
+                  </div>
+                  <div className={styles.detail}>
+                  Electronics Engineering
+                  </div>
+                </div>
+            </div>
+            <div className={styles.detail_kmitl_element}>
+              <div className={styles.right_element}>
+                  <div className={styles.head} style={{color:'#C74A19'}}>
+                    <div>- GPAX -</div>
+                  </div>
+                  <div className={styles.detail}>
+                  2.76
+                  </div>
+                </div>
+                <div className={styles.right_element}>
+                  <div className={styles.head}>
+                    <div style={{color:'#C74A19'}}>- Greduated Project -</div>
+                    <div>Smart Greenhouse ( IOT )</div>
+                  </div>
+                  <div className={styles.detail} style={{opacity:0.7}}>
+                   <li>Coding C language for command on microprocessor to detect values and send values over the internet by MQTT protocol and get values in MQTT broker and send data to mySQL database by Node-red flow on Node.js</li>
+                   <li>Build React.js to show dashboards that include real-time data, graphs and buttons that command devices in the greenhouse.</li>
+                  </div>
+                </div>
+
+            </div>
+          </div>
           : <div></div>}
-        
+        </div>
       </div>
-    </div>
     </>
   )
 }

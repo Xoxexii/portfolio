@@ -14,93 +14,48 @@ function com() {
     
     <div className={styles.com_background}>
       <div className={styles.comlan_background}>
-        <div className={styles.comlan_background_element}>
-          <div style={{textAlign:'center'}}>Computer</div><div style={{right:10,position:'absolute'}}>Language</div>
-        </div>
-        <div className={styles.comlan_background_element}>
-          <div className={styles.child}>
-            <AiOutlineHtml5 className={styles.child_icon}/>
-            <span className={styles.tooltip_html}>HTML</span>
+          <div className={styles.topic_area}>
+            <div className={styles.topic1}><span className={styles.topic1_child}>Computer</span></div>
+            <div className={styles.topic2}><div className={styles.topic2_child}>Language</div></div>
           </div>
-          <div className={styles.child}>
-            <TbBrandCss3 className={styles.child_icon}/>
-            <span className={styles.tooltip_css}>CSS</span>
+          <div className={styles.icon_area}>
+            <div className={styles.icon}><span className={styles.tooltip_html}>HTML</span><AiOutlineHtml5 className={styles.icon_child}/></div>
+            <div className={styles.icon}><span className={styles.tooltip_css}>CSS</span><TbBrandCss3 className={styles.icon_child}/></div>
+            <div className={styles.icon}><span className={styles.tooltip_js}>JAVASCRIPT</span><BiLogoJavascript className={styles.icon_child}/></div>
+            <div className={styles.icon}><span className={styles.tooltip_ts}>TYPESCRIPT</span><BiLogoTypescript className={styles.icon_child}/></div>
+            <div className={styles.icon}><span className={styles.tooltip_php}>PHP</span><SiPhp className={styles.icon_child}/></div>
+            <div className={styles.icon}><span className={styles.tooltip_csharp}>C#</span><SiCsharp className={styles.icon_child}/></div>
+            <div className={styles.icon}><span className={styles.tooltip_java}>JAVA</span><BiLogoJava className={styles.icon_child}/></div>
           </div>
-          <div className={styles.child}>
-            <BiLogoJavascript className={styles.child_icon}/>
-            <span className={styles.tooltip_js}>JAVASCRIPT</span>
-          </div>
-          <div className={styles.child}>
-            <BiLogoTypescript className={styles.child_icon}/>
-            <span className={styles.tooltip_ts}>TYPESCRIPT</span>
-          </div>
-          <div className={styles.child}>
-            <SiPhp className={styles.child_icon}/>
-            <span className={styles.tooltip_php}>PHP</span>
-          </div>
-          <div className={styles.child}>
-            <SiCsharp className={styles.child_icon}/>
-            <span className={styles.tooltip_cs}>C#</span>
-          </div>
-          <div className={styles.child}>
-            <BiLogoJava className={styles.child_icon}/>
-            <span className={styles.tooltip_java}>JAVA</span>
-          </div>
-        </div>
       </div>
-      <div className={styles.front_background}>
-        <div className={styles.front_background_element}>
-          <div style={{textAlign:'center'}}>Frontend</div><div style={{right:10,position:'absolute'}}>Framework</div>
-        </div>
-        <div className={styles.front_background_element}>
-        <div className={styles.child}>
-            <SiNextdotjs className={styles.child_icon}/>
-            <span className={styles.tooltip_next}>NEXT.JS</span>
+      <div className={styles.frontend_background}>
+          <div className={styles.topic_area}>
+            <div className={styles.topic1}><div className={styles.topic1_child}>Frontend</div></div>
+            <div className={styles.topic2}><div className={styles.topic2_child}>Frameworks</div></div>
           </div>
-          <div className={styles.child}>
-            <BiLogoReact className={styles.child_icon}/>
-            <span className={styles.tooltip_react}>REACT.JS</span>
+          <div className={styles.icon_area}>
+          
+          <div className={styles.icon}><span className={styles.tooltip_next}>NEXT.JS</span><SiNextdotjs className={styles.icon_child}/></div>
+          <div className={styles.icon}><span className={styles.tooltip_react}>REACT.JS</span><BiLogoReact className={styles.icon_child}/></div>
+          <div className={styles.icon}><span className={styles.tooltip_redux}>REDUX</span><BiLogoRedux className={styles.icon_child}/></div>
+          <div className={styles.icon}><span className={styles.tooltip_bs}>BOOTSTRAP</span><SiBootstrap className={styles.icon_child}/></div>
+          <div className={styles.icon}><span className={styles.tooltip_tw}>TAILWIND</span><BiLogoTailwindCss className={styles.icon_child}/></div>
+          <div className={styles.icon}><span className={styles.tooltip_sass}>SASS</span><SiSass className={styles.icon_child}/></div>
+           
           </div>
-          <div className={styles.child}>
-            <BiLogoRedux className={styles.child_icon}/>
-            <span className={styles.tooltip_redux}>REDUX</span>
-          </div>
-          <div className={styles.child}>
-            <SiBootstrap className={styles.child_icon}/>
-            <span className={styles.tooltip_bs}>BOOTSTRAP</span>
-          </div>
-          <div className={styles.child}>
-            <BiLogoTailwindCss className={styles.child_icon}/>
-            <span className={styles.tooltip_tail}>TAILWIND</span>
-          </div>
-          <div className={styles.child}>
-            <SiSass className={styles.child_icon}/>
-            <span className={styles.tooltip_sass}>SASS</span>
-          </div>
-        </div>
       </div>
-      <div className={styles.back_background}>
-        <div className={styles.back_background_element}>
-          <div style={{textAlign:'center'}}>Backend</div><div style={{right:10,position:'absolute'}}>Framework</div>
-        </div>
-        <div className={styles.back_background_element}>
-        <div className={styles.child}>
-            <BiLogoNodejs className={styles.child_icon}/>
-            <span className={styles.tooltip_node}>NODE.JS</span>
+      <div className={styles.backend_background}>
+          <div className={styles.topic_area}>
+            <div className={styles.topic1}><div className={styles.topic1_child}>Backend</div></div>
+            <div className={styles.topic2}><div className={styles.topic2_child}>Frameworks</div></div>
           </div>
-          <div className={styles.child}>
-            <SiExpress className={styles.child_icon}/>
-            <span className={styles.tooltip_express}>EXPRESS.JS</span>
+          <div className={styles.icon_area}>
+            <div className={styles.icon}><span className={styles.tooltip_node}>NODE.JS</span><BiLogoNodejs className={styles.icon_child}/></div>
+            <div className={styles.icon}><span className={styles.tooltip_ex}>EXPRESS.JS</span><SiExpress className={styles.icon_child}/></div>
+            <div className={styles.icon}><span className={styles.tooltip_lv}>LARAVEL</span><SiLaravel className={styles.icon_child}/></div>
+            <div className={styles.icon}><span className={styles.tooltip_net}>ASP.NET</span><SiDotnet className={styles.icon_child}/></div>
+          
           </div>
-          <div className={styles.child}>
-            <SiLaravel className={styles.child_icon}/>
-            <span className={styles.tooltip_laravel}>LARAVEL</span>
-          </div>
-          <div className={styles.child}>
-            <SiDotnet className={styles.child_icon}/>
-            <span className={styles.tooltip_net}>ASP.NET</span>
-          </div>
-        </div>
       </div>
     </div>
     </>
