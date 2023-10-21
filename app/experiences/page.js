@@ -23,6 +23,7 @@ function Experiences() {
   const[image2,setImage2] = useState(styles.image2_container)
   const[image3,setImage3] = useState(styles.image3_container)
   const[arrow,setArrow] = useState(styles.arrow1)
+  const[wheels,setWheel] = useState(0)
   
   const[imageStatus,setImageStatus] = useState(1)
   const[image2Status,setImage2Status] = useState(1)
@@ -35,52 +36,52 @@ function Experiences() {
   const Active = () => {
     if(card == 1){
       setArrow(styles.arrow1)
-      var link = document.getElementsByClassName(styles.image_button)
+      var link = document.querySelectorAll('.'+styles.image_button)
     for(let i=0; i < link.length;i++){
-      link[i].className = styles.image_button;
+      link[i].classList = styles.image_button;
     }
     if(image == styles.image_container){
-        link[0].className += ` ${styles.button_active}`;
+        link[0].classList += ` ${styles.button_active}`;
     }else if(image == styles.image_container_second){
-      link[1].className += ` ${styles.button_active}`;
+      link[1].classList += ` ${styles.button_active}`;
     }else if(image == styles.image_container_third){
-    link[2].className += ` ${styles.button_active}`;
+    link[2].classList += ` ${styles.button_active}`;
 }
-var link = document.getElementsByClassName(styles.button)
+var link = document.querySelectorAll('.'+styles.button)
     for(let i=0; i < link.length;i++){
-      link[i].className = styles.button;
+      link[i].classList = styles.button;
     }
-        link[0].className += ` ${styles.button_card_active}`;
+        link[0].classList += ` ${styles.button_card_active}`;
         setBackground(styles.card_background)
         setCard(1)
     
     }
     if(card == 2){
       setArrow(styles.arrow2)
-      var link = document.getElementsByClassName(styles.image2_button)
+      var link = document.querySelectorAll('.'+styles.image2_button)
     for(let i=0; i < link.length;i++){
-      link[i].className = styles.image2_button;
+      link[i].classList = styles.image2_button;
     }
     if(image2 == styles.image2_container){
-        link[0].className += ` ${styles.button2_active}`;
+        link[0].classList += ` ${styles.button2_active}`;
     }else if(image2 == styles.image2_container_second){
-      link[1].className += ` ${styles.button2_active}`;
+      link[1].classList += ` ${styles.button2_active}`;
     }else if(image2 == styles.image2_container_third){
-    link[2].className += ` ${styles.button2_active}`;
+    link[2].classList += ` ${styles.button2_active}`;
 }
     }
     if(card == 3){
       setArrow(styles.arrow3)
-      var link = document.getElementsByClassName(styles.image3_button)
+      var link = document.querySelectorAll('.'+styles.image3_button)
     for(let i=0; i < link.length;i++){
-      link[i].className = styles.image3_button;
+      link[i].classList = styles.image3_button;
     }
     if(image3 == styles.image3_container){
-        link[0].className += ` ${styles.button3_active}`;
+        link[0].classList += ` ${styles.button3_active}`;
     }else if(image3 == styles.image3_container_second){
-      link[1].className += ` ${styles.button3_active}`;
+      link[1].classList += ` ${styles.button3_active}`;
     }else if(image3 == styles.image3_container_third){
-    link[2].className += ` ${styles.button3_active}`;
+    link[2].classList += ` ${styles.button3_active}`;
 }
     }
      
@@ -148,58 +149,59 @@ var link = document.getElementsByClassName(styles.button)
   }
       
   const state = (param) => {
-    var link = document.getElementsByClassName(styles.button)
+    var link = document.querySelectorAll('.'+ styles.button)
     for(let i=0; i < link.length;i++){
-      link[i].className = styles.button;
+      link[i].classList = styles.button;
     }
     if(param == 1){
-        link[0].className += ` ${styles.button_card_active}`;
+        link[0].classList += ` ${styles.button_card_active}`;
         setBackground(styles.card_background)
         setCard(1)
     }else if(param == 2){
-      link[1].className += ` ${styles.button_card_active}`;
+      link[1].classList += ` ${styles.button_card_active}`;
       setBackground(styles.card_background2)
       setCard(2)
     }else if(param == 3){
-    link[2].className += ` ${styles.button_card_active}`;
+    link[2].classList += ` ${styles.button_card_active}`;
     setBackground(styles.card_background3)
     setCard(3)
   }
   }
 
   const wheel = (param) => {
-    var link = document.getElementsByClassName(styles.button)
+    var link2 = document.querySelectorAll('.'+ styles.button)
     window.addEventListener('wheel', function(event)
       {
       if (event.deltaY > 0 && card == 1){
-        for(let i=0; i < link.length;i++){
-          link[i].className = styles.button;
+        for(let i=0; i < link2.length;i++){
+          link2[i].classList = styles.button;
+          setWheel(link2[i].classList)
         }
-        link[1].className += ` ${styles.button_card_active}`;
+        link2[1].classList += ` ${styles.button_card_active}`;
         setBackground(styles.card_background2)
         setCard(2)
         }
       else if(event.deltaY > 0 && card == 2){
-        for(let i=0; i < link.length;i++){
-          link[i].className = styles.button;
+        for(let i=0; i < link2.length;i++){
+          link2[i].classList = styles.button;
         }
-        link[2].className += ` ${styles.button_card_active}`;
+        link2[2].classList += ` ${styles.button_card_active}`;
         setBackground(styles.card_background3)
         setCard(3)
         }
       else if(event.deltaY < 0 && card == 2){
-        for(let i=0; i < link.length;i++){
-          link[i].className = styles.button;
+        for(let i=0; i < link2.length;i++){
+          link2[i].classList = styles.button;
         }
-        link[0].className += ` ${styles.button_card_active}`;
+        link2[0].classList += ` ${styles.button_card_active}`;
         setBackground(styles.card_background)
         setCard(1)
       }
       else if(event.deltaY < 0 && card == 3){
-        for(let i=0; i < link.length;i++){
-          link[i].className = styles.button;
+        for(let i=0; i < link2.length;i++){
+          link2[i].classList = styles.button;
         }
-        link[1].className += ` ${styles.button_card_active}`;
+        link2[1].classList += ` ${styles.button_card_active}`;
         setBackground(styles.card_background2)
         setCard(2)
     }
