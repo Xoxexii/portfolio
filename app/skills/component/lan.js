@@ -3,47 +3,40 @@ import styles from './lan.module.scss'
 
 function lan() {
   return (
+    <>
     <div className={styles.lan_background}>
-      <div className={styles.background_component}>
-            <div className={styles.component_header}>
-                  <div>Soft Skills</div>
-            </div>
-            <div className={styles.component_detail}>
-                  <div className={styles.detail_element}>
-                        <div className={styles.element_child}>
-                            <div className={styles.child_fingers}>
-                                <div>Passion</div>
-                            </div>
-                            <div className={styles.child_fingers}>
-                                <div>Problem - Solving</div>
-                            </div>
-                            <div className={styles.child_fingers}>
-                                <div>Responsibility</div>
-                            </div>
-                            <div className={styles.child_fingers}>
-                                <div>Creativity</div>
-                            </div>
-                        </div>
-                  </div>
-                  <div className={styles.detail_element}>
-                        <div className={styles.element_child}>
-                            <div className={styles.child_fingers}>
-                                <div>Critical Thinking</div>
-                            </div>
-                            <div className={styles.child_fingers}>
-                                <div>Flexibility</div>
-                            </div>
-                            <div className={styles.child_fingers}>
-                                <div>Independence</div>
-                            </div>
-                            <div className={styles.child_fingers}>
-                                <div>Time Management</div>
-                            </div>
-                        </div>
-                  </div>
-            </div>
-      </div>
+      <div className={styles.topic_area}>
+        <span className={styles.child}>Passion</span>
+        <span className={styles.child}>Soft Skills</span>
+        <span className={styles.child}>Problem - Solving</span>
+        <span className={styles.child}>Responsibility</span>
+        <span className={styles.child}>Creativity</span>
+        <span className={styles.child}>Flexibility</span>
+        <span className={styles.child}>Independence</span>
+        <span className={styles.child}>Time Management</span>
+        <span className={styles.child}>Ethical Awareness</span>
+        <span className={styles.child}>Adaptability</span>
+        <span className={styles.child}>Empathy</span>
+        <div className={styles.mid}>
+            <div className={styles.line}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.circle}></div>
+        </div>
+        <div className={styles.goal}>
+            <div className={styles.out}></div>
+            <div className={styles.in}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.semicircle}></div>
+        </div>
+        <div className={styles.goal2}>
+            <div className={styles.out}></div>
+            <div className={styles.in}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.semicircle}></div>
+        </div>
     </div>
+    </div>
+    </>
   )
 }
 
