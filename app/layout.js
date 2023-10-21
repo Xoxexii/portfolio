@@ -6,7 +6,7 @@ import { Inter } from 'next/font/google'
 import Nav from '../components/Nav/Nav'
 import Sidebar from '@/components/Sidebar/Sidebar'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'],preload: true })
 
 
 export default function RootLayout({ children }) {
