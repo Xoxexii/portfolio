@@ -13,6 +13,9 @@ export default function RootLayout({ children }) {
   
   return (
     <html lang="en" className={inter.className}>
+      <head>
+        <link rel="preload" href="experience.module.scss" as="style" />
+      </head>
       <body>
         <title>Chanokchon</title>
         <Sidebar />
