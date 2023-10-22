@@ -77,17 +77,17 @@ const back = (param) =>{
       <div className={background}>
         {buttonArea === styles.button_area ? 
           <div className={styles.button_area}>
-            <div className={brrChoose}><Image  src={image2} alt="Picture of the author"   onClick={()=>click('brr')} priority={true}/></div>
-            <div className={kmitlChoose}><Image  src={image3} alt="Picture of the author"   onClick={()=>click('kmitl')} priority={true}/></div>
+            <div className={brrChoose}><Image  src={image2} alt="Picture of the author"   onClick={()=>click('brr')} priority={true} placeholder='blur'/></div>
+            <div className={kmitlChoose}><Image  src={image3} alt="Picture of the author"   onClick={()=>click('kmitl')} priority={true} placeholder='blur'/></div>
             
             
             
           </div> : buttonArea === styles.button_area_brr ?
           <div className={styles.button_area_brr}>
-            <div className={brrChoose}><Image  src={image2} alt="Picture of the author"   onClick={()=>back('brr')} priority={true}/></div>
+            <div className={brrChoose}><Image  src={image2} alt="Picture of the author"   onClick={()=>back('brr')} priority={true} placeholder='blur'/></div>
           </div> : 
           <div className={styles.button_area_kmitl}>
-            <div className={kmitlChoose}><Image  src={image3} alt="Picture of the author"   onClick={()=>back('kmitl')} priority={true}/></div>
+            <div className={kmitlChoose}><Image  src={image3} alt="Picture of the author"   onClick={()=>back('kmitl')} priority={true} placeholder='blur'/></div>
             
           </div> 
         }
