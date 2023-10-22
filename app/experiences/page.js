@@ -223,7 +223,7 @@ var link = document.querySelectorAll('.'+styles.button)
                       <div className={styles.first_card}>
                             <div className={styles.first_card_left}>
                                 <div className={styles.logo_area}>
-                                    <Image  src={technimal} alt="Technimal" className={styles.logo} priority={false}/>
+                                    <Image  src={technimal} alt="Technimal" className={styles.logo} priority={true}/>
                                 </div>
                                 <div className={styles.detail_area}>
                                     <div className={styles.position_area}>
@@ -294,7 +294,7 @@ var link = document.querySelectorAll('.'+styles.button)
                   <div className={styles.second_card}>
                             <div className={styles.second_card_left}>
                                 <div className={styles.logo2_area}>
-                                    <Image  src={mitsu} alt="Mitsumaru" className={styles.logo2} priority={false}/>
+                                    <Image  src={mitsu} alt="Mitsumaru" className={styles.logo2} priority={true}/>
                                 </div>
                                 <div className={styles.detail2_area}>
                                     <div className={styles.position2_area}>
@@ -365,7 +365,7 @@ var link = document.querySelectorAll('.'+styles.button)
                     <div className={styles.third_card}>
                             <div className={styles.third_card_left}>
                                 <div className={styles.logo3_area}>
-                                    <Image  src={kmitl} alt="Mitsumaru" className={styles.logo3} priority={false}/>
+                                    <Image  src={kmitl} alt="Mitsumaru" className={styles.logo3} priority={true}/>
                                 </div>
                                 <div className={styles.detail3_area}>
                                     <div className={styles.position3_area}>
