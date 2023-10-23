@@ -15,6 +15,7 @@ function Education() {
   const[kmitlChoose,setKmitlChoose] = useState(styles.kmitl_image)
   const[brr,setBrr] = useState(styles.brr_detail)
   const[kmitl,setKmitl] = useState(styles.kmitl_detail)
+  const[backk,setBack] = useState(styles.back)
   
   const click = (param) =>{
     if(param == 'brr'){
@@ -47,24 +48,28 @@ const back = (param) =>{
   if(param == 'brr'){
     setBrrChoose(styles.brr_change_image_back)
     setBrr(styles.brr_detail_back)
+    setBack(styles.backmove)
     setTimeout(() => {
       setBackground(styles.edu_background)
       setButtonArea(styles.button_area)
       setBrrChoose(styles.brr_image)
       setKmitlChoose(styles.kmitl_image)
       setBrr(styles.brr_detail)
+      setBack(styles.back)
     }, 650);
 
   } else if(param == 'kmitl'){
     setKmitlChoose(styles.kmitl_change_image_back)
     setBrrChoose(styles.kmitl_brr_back)
     setKmitl(styles.kmitl_detail_back)
+    setBack(styles.backmove)
     setTimeout(() => {
       setBackground(styles.edu_background)
       setButtonArea(styles.button_area)
       setKmitlChoose(styles.kmitl_image)
       setBrrChoose(styles.brr_image)
       setKmitl(styles.kmitl_detail)
+      setBack(styles.back)
     }, 650);
   }
   
@@ -84,10 +89,12 @@ const back = (param) =>{
             
           </div> : buttonArea === styles.button_area_brr ?
           <div className={styles.button_area_brr}>
-            <div className={brrChoose}><Image  src={image2} alt="Picture of the author"   onClick={()=>back('brr')} priority={true} placeholder='blur'/></div>
+            <GoArrowLeft className={backk} onClick={()=>back('brr')}/>
+            <div className={brrChoose}><Image  src={image2} alt="Picture of the author"    priority={true} placeholder='blur'/></div>
           </div> : 
           <div className={styles.button_area_kmitl}>
-            <div className={kmitlChoose}><Image  src={image3} alt="Picture of the author"   onClick={()=>back('kmitl')} priority={true} placeholder='blur'/></div>
+            <GoArrowLeft className={backk} onClick={()=>back('kmitl')}/>
+            <div className={kmitlChoose}><Image  src={image3} alt="Picture of the author"   priority={true} placeholder='blur'/></div>
             
           </div> 
         }
