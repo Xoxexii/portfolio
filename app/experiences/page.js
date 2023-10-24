@@ -238,7 +238,7 @@ var link = document.querySelectorAll('.'+styles.button)
                               </div>
                             <div className={styles.first_card_right}>
                                 <div className={styles.name_area}>
-                                    <div style={{fontSize: 'calc(11.5vw - 11.5vh)',color:'#1665D8'}}>Technimal co.ltd</div>
+                                    <div className={styles.name}>Technimal co.ltd</div>
                                     
                                 </div>
                               <div className={styles.content_area}>
@@ -268,7 +268,7 @@ var link = document.querySelectorAll('.'+styles.button)
                                         </div>
                                     </div>
                                     <div className={styles.image_button_background}>
-                                        <div style={{display:'flex',justifyContent:'end',alignItems:'center',fontSize:'calc(5vw - 5vh)'}}>
+                                        <div style={{display:'flex',justifyContent:'end',alignItems:'center'}}>
                                           <MdOutlineKeyboardDoubleArrowLeft className={styles.iconleft} onClick={()=> Click('left')}/>
                                         </div>
                                         <div className={styles.image_button_area}>
@@ -276,15 +276,15 @@ var link = document.querySelectorAll('.'+styles.button)
                                               <div className={styles.image_button}></div>
                                               <div className={styles.image_button}></div>
                                         </div>
-                                        <div style={{display:'flex',justifyContent:'start',alignItems:'center',fontSize:'calc(5vw - 5vh)'}}>
+                                        <div style={{display:'flex',justifyContent:'start',alignItems:'center'}}>
                                           <MdOutlineKeyboardDoubleArrowRight className={styles.iconright} onClick={()=> Click('right')}/>
                                         </div>
                                     </div>
                                   
                                 </div>
                                 <div className={styles.content_detail_area}>
-                                    <div style={{height:50 + '%',display:'flex',alignItems:'center',justifyContent:'center',fontSize: 'calc(6vw - 6vh)',color: '#1665D8'}}>internship</div>
-                                    <div style={{height:50 + '%',display:'flex',justifyContent:'center',fontSize: 'calc(2.5vw - 2.5vh)',margin:'0 5vh',color: 'white'}}>Build Wireframes, Mock-up Ideas and build in React.js projects to propose to senior developers for use in customer selection.</div>
+                                    <div className={styles.detail_topic}>internship</div>
+                                    <div className={styles.detail_des}>Build Wireframes, Mock-up Ideas and build in React.js projects to propose to senior developers for use in customer selection.</div>
                                 </div>
                               </div>
                             </div>
@@ -309,7 +309,7 @@ var link = document.querySelectorAll('.'+styles.button)
                               </div>
                             <div className={styles.second_card_right}>
                                 <div className={styles.name2_area}>
-                                    <div style={{fontSize: 'calc(7.5vw - 7.5vh)'}}>Mitsumaru electric co. ltd</div>
+                                    <div className={styles.name}>Mitsumaru electric co. ltd</div>
                                     
                                 </div>
                               <div className={styles.content2_area}>
@@ -339,7 +339,7 @@ var link = document.querySelectorAll('.'+styles.button)
                                         </div>
                                     </div>
                                     <div className={styles.image2_button_background}>
-                                        <div style={{display:'flex',justifyContent:'end',alignItems:'center',fontSize:'calc(5vw - 5vh)'}}>
+                                        <div style={{display:'flex',justifyContent:'end',alignItems:'center'}}>
                                           <MdOutlineKeyboardDoubleArrowLeft className={styles.icon2left} onClick={()=> Click('left')}/>
                                         </div>
                                         <div className={styles.image2_button_area}>
@@ -347,15 +347,15 @@ var link = document.querySelectorAll('.'+styles.button)
                                               <div className={styles.image2_button}></div>
                                               <div className={styles.image2_button}></div>
                                         </div>
-                                        <div style={{display:'flex',justifyContent:'start',alignItems:'center',fontSize:'calc(5vw - 5vh)'}}>
+                                        <div style={{display:'flex',justifyContent:'start',alignItems:'center'}}>
                                           <MdOutlineKeyboardDoubleArrowRight className={styles.icon2right} onClick={()=> Click('right')}/>
                                         </div>
                                     </div>
                                   
                                 </div>
                                 <div className={styles.content2_detail_area}>
-                                    <div style={{height:50 + '%',display:'flex',alignItems:'center',justifyContent:'center',fontSize: 'calc(6vw - 6vh)',color: '#EC1B24'}}>cooperate</div>
-                                    <div style={{height:50 + '%',display:'flex',justifyContent:'center',fontSize: 'calc(2.5vw - 2.5vh)',margin:'0 5vh',color: 'white'}}>Coding C language for command on microprocessor to count the number of products in productions line.Import number of products to database and made a dashboard to analyze.</div>
+                                    <div className={styles.detail_topic}>cooperate</div>
+                                    <div className={styles.detail_des}>Coding C language for command on microprocessor to count the number of products in productions line.Import number of products to database and made a dashboard to analyze.</div>
                                 </div>
                               </div>
                             </div>
@@ -380,7 +380,7 @@ var link = document.querySelectorAll('.'+styles.button)
                               </div>
                             <div className={styles.third_card_right}>
                                 <div className={styles.name3_area}>
-                                    <div style={{fontSize: 'calc(5.5vw - 5.5vh)',marginLeft:6+'vw'}}>King Mongkut's Institute of Technology Ladkrabang</div>
+                                    <div className={styles.name}>King Mongkut's Institute of Technology Ladkrabang</div>
                                 </div>
                               <div className={styles.content3_area}>
                                 <div className={styles.content3_image_area}>
@@ -409,7 +409,7 @@ var link = document.querySelectorAll('.'+styles.button)
                                         </div>
                                     </div>
                                     <div className={styles.image3_button_background}>
-                                        <div style={{display:'flex',justifyContent:'end',alignItems:'center',fontSize:'calc(5vw - 5vh)'}}>
+                                        <div style={{display:'flex',justifyContent:'end',alignItems:'center'}}>
                                           <MdOutlineKeyboardDoubleArrowLeft className={styles.icon3left} onClick={()=> Click('left')}/>
                                         </div>
                                         <div className={styles.image3_button_area}>
@@ -417,15 +417,15 @@ var link = document.querySelectorAll('.'+styles.button)
                                               <div className={styles.image3_button}></div>
                                               <div className={styles.image3_button}></div>
                                         </div>
-                                        <div style={{display:'flex',justifyContent:'start',alignItems:'center',fontSize:'calc(5vw - 5vh)'}}>
+                                        <div style={{display:'flex',justifyContent:'start',alignItems:'center'}}>
                                           <MdOutlineKeyboardDoubleArrowRight className={styles.icon3right} onClick={()=> Click('right')}/>
                                         </div>
                                     </div>
                                   
                                 </div>
                                 <div className={styles.content3_detail_area}>
-                                    <div style={{height:50 + '%',display:'flex',alignItems:'center',justifyContent:'center',fontSize: 'calc(6vw - 6vh)',color:'#C74A19'}}>graduated project</div>
-                                    <div style={{height:50 + '%',display:'flex',justifyContent:'center',fontSize: 'calc(2vw - 2vh)',margin:'0 5vh',color:'white'}}>
+                                    <div className={styles.detail_topic}>graduated project</div>
+                                    <div className={styles.detail_des}>
                                       <li>
                                       Get values in MQTT broker and send data to mySQL database by Node-red flow on Node.js
                                       </li>
