@@ -665,7 +665,7 @@
         align-items: center;
         position: absolute;
         width: 100vw;
-        height: 100vh;
+        height: 85vh;
         background-color: black;
         left: 0;
         top: 15vh;
@@ -1220,7 +1220,7 @@
         from{
             transform: translate(0,0);
         }to{
-            transform: translate(25vw,-37.25vh);
+            transform: translate(25vw,-35vh);
         }
     }
     @keyframes brr_kmitlMove {
@@ -1243,7 +1243,7 @@
         from{
             transform: translate(0,0);
         }to{
-            transform: translate(-25vw,-37.25vh);
+            transform: translate(-25vw,-35vh);
             display: none;
         }
     }
@@ -1251,7 +1251,7 @@
         from{
             transform: translate(0,0);
         }to{
-            transform: translate(-25vw,37.25vh);
+            transform: translate(-25vw,35vh);
             display: none;
         }
     }
@@ -1259,7 +1259,7 @@
         from{
             transform: translate(0,0);
         }to{
-            transform: translate(25vw,37.25vh);
+            transform: translate(25vw,35vh);
             display: none;
         }
     }
