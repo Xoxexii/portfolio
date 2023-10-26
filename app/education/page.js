@@ -171,7 +171,7 @@ const back = (param) =>{
                 <div className={styles.left_element}>
                   <div className={styles.head} style={{color:'#C74A19'}}>
                     <div>- University -</div>
-                    <div style={{display:'flex',justifyContent:'center',fontSize:'calc(2.5vw - 2.5vh)',color:'white'}}>King Mongkut's Institute of Technology Ladkrabang</div>
+                    <div style={{display:'flex',justifyContent:'center',color:'white'}}>King Mongkut's Institute of Technology Ladkrabang</div>
                   </div>
                   <div className={styles.detail}>
                   <div>( KMITL )</div>

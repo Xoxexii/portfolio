@@ -26,8 +26,39 @@
         transform: translateX(0);
     }
 }
-/*****************************************************************************************************************/
-@media only screen and (max-width:480px) {
+/************************************************************320px*************************************************************/
+@media only screen and (min-width:601px) and (max-width:767px){
+    .detail_area{
+        position: absolute;
+        display: flex;
+        left: 25vw;
+        width: 75vw;
+        height: 100vh;
+        background-color: #000000;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .start{
+        position: absolute;
+        font-size: calc(10% + 2vw);
+        color: white;
+        animation: name 1.5s ease none;
+        
+    }
+    @keyframes name {
+        from{
+            transform: translateX(10%);
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+  }
+  /************************************************************320px*************************************************************/
+  @media only screen and (min-width:428px) and (max-width:600px){
     .detail_area{
         position: absolute;
         display: flex;
@@ -55,9 +86,9 @@
             opacity: 100%;
         }
     }
-}
-/**************************************************************************************************************************/
-@media only screen and (max-width:320px) {
+  }
+  /************************************************************320px*************************************************************/
+  @media only screen and (min-width:414px) and (max-width:427px){
     .detail_area{
         position: absolute;
         display: flex;
@@ -85,4 +116,64 @@
             opacity: 100%;
         }
     }
-}
+  }
+  /************************************************************320px*************************************************************/
+  @media only screen and (min-width:393px) and (max-width:413px){
+    .detail_area{
+        position: absolute;
+        display: flex;
+        width: 100vw;
+        height: 85vh;
+        left: 0;
+        top: 15vh;
+        background-color: #000000;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .start{
+        position: absolute;
+        font-size: calc(40% + 2vw);
+        color: white;
+        animation: name 1.5s ease none;
+        
+    }
+    @keyframes name {
+        from{
+            opacity: 0%;
+        }
+        to{
+            opacity: 100%;
+        }
+    }
+    }
+  /************************************************************320px*************************************************************/
+  @media only screen and (min-width:360px) and (max-width:392px){
+    .detail_area{
+        position: absolute;
+        display: flex;
+        width: 100vw;
+        height: 85vh;
+        left: 0;
+        top: 15vh;
+        background-color: #000000;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .start{
+        position: absolute;
+        font-size: calc(40% + 2vw);
+        color: white;
+        animation: name 1.5s ease none;
+        
+    }
+    @keyframes name {
+        from{
+            opacity: 0%;
+        }
+        to{
+            opacity: 100%;
+        }
+    }
+  }
