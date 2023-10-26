@@ -165,7 +165,7 @@ const leftClick =  () =>{
           <div className={left} onClick={()=>leftClick()} id='left'>{l_detail}</div>
       
         
-          <div className={center} id='center'></div>
+          <div className={center} id='center'>{c_detail}</div>
         
         
           <div className={right} onClick={()=>rightClick()} id='right'>{r_detail}</div>

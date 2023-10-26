@@ -1127,8 +1127,7 @@
     }
     .comlan_background{
         display: grid;
-        width: 100%;
-        grid-template-rows: 4fr 1fr;
+        grid-template-rows: 3fr 1fr;
         background-color: rgb(0, 0, 0);
         border-radius: 15px;
         .topic_area{
@@ -1344,8 +1343,7 @@
     }
     .frontend_background{
         display: grid;
-        width: 100%;
-        grid-template-rows: 4fr 1fr;
+        grid-template-rows: 3fr 1fr;
         background-color: rgb(0, 0, 0);
         .topic_area{
             background-color: rgb(0, 0, 0);
@@ -1378,7 +1376,7 @@
             
         }.icon_area{
             
-            background-color: rgb(8, 7, 7);
+            background-color: rgb(0, 0, 0);
             display: flex;
             
             
@@ -1534,7 +1532,7 @@
     }
     .backend_background{
         display: grid;
-        grid-template-rows: 4fr 1fr;
+        grid-template-rows: 3fr 1fr;
         background-color: rgb(0, 0, 0);
         border-radius: 0 0 15px 15px;
         width: 100%;
@@ -1543,7 +1541,7 @@
             display: grid;
             grid-template-rows: 1fr 1fr;
             .topic1{
-                background-color: rgb(7, 6, 4);
+                background-color: rgb(0, 0, 0);
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
@@ -1691,7 +1689,7 @@
     .comlan_background{
         display: grid;
         width: 100%;
-        grid-template-rows: 4fr 1fr;
+        grid-template-rows: 3fr 1fr;
         background-color: rgb(0, 0, 0);
         border-radius: 15px;
         .topic_area{
@@ -1908,7 +1906,7 @@
     .frontend_background{
         display: grid;
         width: 100%;
-        grid-template-rows: 4fr 1fr;
+        grid-template-rows: 3fr 1fr;
         background-color: rgb(0, 0, 0);
         .topic_area{
             background-color: rgb(0, 0, 0);
@@ -2097,7 +2095,7 @@
     }
     .backend_background{
         display: grid;
-        grid-template-rows: 4fr 1fr;
+        grid-template-rows: 3fr 1fr;
         background-color: rgb(0, 0, 0);
         border-radius: 0 0 15px 15px;
         width: 100%;
@@ -2254,7 +2252,7 @@
     .comlan_background{
         display: grid;
         width: 100%;
-        grid-template-rows: 4fr 1fr;
+        grid-template-rows: 3fr 1fr;
         background-color: rgb(0, 0, 0);
         border-radius: 15px;
         .topic_area{
@@ -2471,7 +2469,7 @@
     .frontend_background{
         display: grid;
         width: 100%;
-        grid-template-rows: 4fr 1fr;
+        grid-template-rows: 3fr 1fr;
         background-color: rgb(0, 0, 0);
         .topic_area{
             background-color: rgb(0, 0, 0);
@@ -2660,7 +2658,7 @@
     }
     .backend_background{
         display: grid;
-        grid-template-rows: 4fr 1fr;
+        grid-template-rows: 3fr 1fr;
         background-color: rgb(0, 0, 0);
         border-radius: 0 0 15px 15px;
         width: 100%;
@@ -2817,7 +2815,7 @@
     .comlan_background{
         display: grid;
         width: 100%;
-        grid-template-rows: 4fr 1fr;
+        grid-template-rows: 3fr 1fr;
         background-color: rgb(0, 0, 0);
         border-radius: 15px;
         .topic_area{
@@ -3034,7 +3032,7 @@
     .frontend_background{
         display: grid;
         width: 100%;
-        grid-template-rows: 4fr 1fr;
+        grid-template-rows: 3fr 1fr;
         background-color: rgb(0, 0, 0);
         .topic_area{
             background-color: rgb(0, 0, 0);
@@ -3223,7 +3221,7 @@
     }
     .backend_background{
         display: grid;
-        grid-template-rows: 4fr 1fr;
+        grid-template-rows: 3fr 1fr;
         background-color: rgb(0, 0, 0);
         border-radius: 0 0 15px 15px;
         width: 100%;
