@@ -327,14 +327,15 @@
     }
 }
 /************************************************************320px*************************************************************/
-@media only screen and (min-width:601px) and (max-width:809px){
+@media only screen and (max-width:601px){
     .skills_background{
         position: absolute;
         display: grid;
         grid-template-columns: 1fr 5fr 1fr;
-        left: 25vw;
-        width: 75vw;
-        height: 100vh;
+        left: 0;
+        width: 100vw;
+        height: 85vh;
+        top: 15vh;
         background-color: #000000;
         color: white;
     }
@@ -658,7 +659,7 @@
     }
   }
 /************************************************************320px*************************************************************/
-@media only screen and (min-width:428px) and (max-width:601px){
+@media only screen and (max-width:429px){
     .skills_background{
         position: absolute;
         display: grid;
@@ -990,7 +991,7 @@
     }
   }
   /************************************************************320px*************************************************************/
-  @media only screen and (min-width:414px) and (max-width:428px){
+  @media only screen and (max-width:415px){
     .skills_background{
         position: absolute;
         display: grid;
@@ -1322,7 +1323,7 @@
     }
   }
   /************************************************************320px*************************************************************/
-  @media only screen and (min-width:393px) and (max-width:414px){
+  @media only screen and (max-width:394px){
     .skills_background{
         position: absolute;
         display: grid;
@@ -1654,7 +1655,7 @@
     }
     }
   /************************************************************320px*************************************************************/
-  @media only screen and (min-width:360px) and (max-width:393px){
+  @media only screen and (max-width:361px){
     .skills_background{
         position: absolute;
         display: grid;

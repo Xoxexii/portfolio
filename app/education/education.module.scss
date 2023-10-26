@@ -657,17 +657,18 @@
     }
 }
 /************************************************************320px*************************************************************/
-@media only screen and (min-width:601px) and (max-width:809px){
+@media only screen and (max-width:601px){
     .edu_background{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         position: absolute;
-        width: 75vw;
-        height: 100vh;
+        width: 100vw;
+        height: 85vh;
         background-color: black;
-        left: 25vw;
+        left: 0;
+        top: 15vh;
         
         .button_area{
             display: flex;
@@ -714,6 +715,7 @@
                 width: 100%;
                 height: 100%;
                 background-color: rgb(0, 0, 0);
+                
             }
             .brr_brr_image_move img{
                 width: 35%;
@@ -739,7 +741,7 @@
                 align-items: center;
                 width: 100%;
                 height: 100%;
-                background-color: rgb(0, 0, 0);
+                background-color: rgb(5, 7, 7);
             }
             .kmitl_brr_image_move img {
                 width: 35%;
@@ -779,10 +781,11 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        width: 75vw;
-        height: 100vh;
+        width: 100vw;
+        height: 85vh;
         background-color: black;
-        left: 25vw;
+        left: 0;
+        top: 15vh;
         .button_area_brr{
             display: flex;
             width: 100%;
@@ -811,19 +814,18 @@
             .brr_change_image_back img{
                 width: 35%;
                 height: auto;
-                z-index: 5;
                 animation: backBrr_brrMove 650ms ease forwards;
             }.back{
                 position: absolute;
                 color: white;
-                transform: translateX(-8vw);
+                transform: translateX(-10vw);
                 width: 5%;
                 height: 5%;
                 animation: iconappear 650ms ease forwards;
             }.backmove{
                 position: absolute;
                 color: white;
-                transform: translateX(-8vw);
+                transform: translateX(-10vw);
                 width: 5%;
                 height: 5%;
                 animation: icondisappear 150ms ease forwards;
@@ -868,14 +870,14 @@
             .back{
                 position: absolute;
                 color: white;
-                transform: translateX(-15vw);
+                transform: translateX(-20vw);
                 width: 5%;
                 height: 5%;
-                animation: iconappear2 650ms ease forwards;
+                animation: iconappear2 650ms ease;
             }.backmove{
                 position: absolute;
                 color: white;
-                transform: translateX(-15vw);
+                transform: translateX(-20vw);
                 width: 5%;
                 height: 5%;
                 animation: icondisappear2 150ms ease forwards;
@@ -885,7 +887,7 @@
         }
         .detail_area{
             width: 100%;
-            height: 70vh;
+            height: 55vh;
             background-color: black;
             padding: 1vh;
             color: white;
@@ -911,7 +913,7 @@
                             display: grid;
                             grid-template-rows: 1fr 2fr;
                             padding: 0.5vh;
-                            font-size: 1.5vh;
+                            font-size: calc(1vw + 0.5vh);
                         }
                         .head div{
                             display: flex;
@@ -921,7 +923,7 @@
                         .detail{
                             display: flex;
                             justify-content: center;
-                            font-size: 1.5vh;
+                            font-size: 1vh;
                         }
                     }
                     .right_element{
@@ -933,7 +935,7 @@
                             display: grid;
                             grid-template-rows: 1fr 2fr;
                             padding: 0.5vh;
-                            font-size: 1.5vh;
+                            font-size: calc(1vw + 0.5vh);
                         }
                         .head div{
                             display: flex;
@@ -943,7 +945,7 @@
                         .detail{
                             display: flex;
                             justify-content: center;
-                            font-size: 1.5vh;
+                            font-size: 1vh;
                         }
                     }
                 }
@@ -953,23 +955,23 @@
                 grid-template-columns: 1fr 1fr;
                 width: 100%;
                 height: 100%;
-                background-color: rgb(1, 1, 1);
-                animation: disappear 350ms ease forwards;
+                background-color: rgb(0, 0, 0);
+                animation: disappear 350ms ease-in-out forwards;
                 .detail_brr_element{
                     display: grid;
                     grid-template-rows: 1fr 1fr 1fr;
                     margin: 1vh;
-                    background-color: rgb(0, 0, 0);
+                    background-color: black;
                     .left_element{
                         display: grid;
                         grid-template-rows: 1fr 1fr;
-                        background-color: rgb(0, 0, 0);
+                        background-color: black;
                         margin: 0.5vh;
                         .head{
                             display: grid;
                             grid-template-rows: 1fr 2fr;
                             padding: 0.5vh;
-                            font-size: 1.5vh;
+                            font-size: calc(1vw + 0.5vh);
                         }
                         .head div{
                             display: flex;
@@ -979,7 +981,7 @@
                         .detail{
                             display: flex;
                             justify-content: center;
-                            font-size: 1.5vh;
+                            font-size: 1vh;
                         }
                     }
                     .right_element{
@@ -991,7 +993,7 @@
                             display: grid;
                             grid-template-rows: 1fr 2fr;
                             padding: 0.5vh;
-                            font-size: 1.5vh;
+                            font-size: calc(1vw + 0.5vh);
                         }
                         .head div{
                             display: flex;
@@ -1001,7 +1003,7 @@
                         .detail{
                             display: flex;
                             justify-content: center;
-                            font-size: 1.5vh;
+                            font-size: 1vh;
                         }
                     }
                 }
@@ -1029,13 +1031,13 @@
                             display: grid;
                             grid-template-rows: 1fr;
                             padding: 0.5vh;
-                            font-size: 1.5vh;
+                            font-size: calc(1vw + 0.5vh);
                         }
                         .head:nth-child(2){
                             display: grid;
                             grid-template-rows: 1fr 1fr;
                             padding: 0.5vh;
-                            font-size: 1.5vh;
+                            font-size: calc(3vw - 3vh);
                         }
                         .head div{
                             display: flex;
@@ -1045,12 +1047,12 @@
                         .detail{
                             display: flex;
                             justify-content: center;
-                            font-size: 1.5vh;
+                            font-size: 1vh;
                         }
                         .detail:nth-child(2){
                             display: grid;
                             grid-template-rows: 1fr 1fr;
-                            font-size: 1.5vh;
+                            font-size: 1vh;
                         }
                     }
                     
@@ -1068,13 +1070,13 @@
                             display: grid;
                             grid-template-rows: 1fr ;
                             padding: 0.5vh;
-                            font-size: 1.5vh;
+                            font-size: calc(1vw + 0.5vh);
                         }
                         .head:nth-child(2){
                             display: grid;
                             grid-template-rows: 1fr 1fr;
                             padding: 0.5vh;
-                            font-size: 1.5vh;
+                            font-size: calc(3vw - 3vh);
                         }
                         .head div{
                             display: flex;
@@ -1084,7 +1086,7 @@
                         .detail{
                             display: flex;
                             justify-content: center;
-                            font-size: 1.5vh;
+                            font-size: 1vh;
                         }
                         
                     }.right_element:nth-child(2){
@@ -1102,7 +1104,7 @@
                             display: grid;
                             grid-template-rows: 1fr 1fr;
                             background-color: rgb(0, 0, 0);
-                            font-size: 1.5vh;
+                            font-size: 1vh;
                         }
                     }
                 }
@@ -1204,7 +1206,7 @@
                             display: grid;
                             grid-template-rows: 1fr 1fr;
                             background-color: rgb(0, 0, 0);
-                            font-size: 1.5vh;
+                            font-size: calc(2vw - 2vh);
                         }
                     }
                 }
@@ -1214,56 +1216,50 @@
         
         
     }
-    
-    
     @keyframes brr_brrMove {
         from{
-            transform: rotate(0deg)translate(0,0);
+            transform: translate(0,0);
         }to{
-            transform: rotate(90deg)translate(-35vh,-18.75vw)rotate(-90deg);
+            transform: translate(25vw,-27.5vh);
         }
     }
     @keyframes brr_kmitlMove {
         from{
-            transform: rotate(0deg)translate(0,0);
             opacity: 1;
         }to{
-            transform: rotate(90deg)translate(15.5vw,30vh)rotate(-90deg);
             opacity: 0;
             display: none;
         }
     }
     @keyframes kmitl_brrMove {
         from{
-            transform: rotate(0deg)translate(0,0)scale(1,1);
             opacity: 1;
         }to{
-            transform: rotate(-90deg)translate(-17vw,45vh)rotate(90deg)scale(0.5,0.5);
             opacity: 0;
             
         }
     }
     @keyframes kmitl_kmitlMove {
         from{
-            transform: rotate(0deg)translate(0,0);
+            transform: translate(0,0);
         }to{
-            transform: rotate(-90deg)translate(35vh,-18.75vw)rotate(90deg);
+            transform: translate(-25vw,-27.5vh);
             display: none;
         }
     }
     @keyframes backBrr_brrMove {
         from{
-            transform: rotate(90deg)rotate(-90deg);
+            transform: translate(0,0);
         }to{
-            transform: rotate(0deg)translate(-18.8vw,35vh);
+            transform: translate(-25vw,27.5vh);
             display: none;
         }
     }
     @keyframes backKmitl_kmitlMove {
         from{
-            transform: rotate(-90deg)rotate(90deg);
+            transform: translate(0,0);
         }to{
-            transform: rotate(0deg)translate(18.7vw,35vh);
+            transform: translate(25vw,27.5vh);
             display: none;
         }
     }
@@ -1284,42 +1280,42 @@
     @keyframes iconappear {
         from{
             opacity: 0;
-            transform: translate(-10vw);
+            transform: translate(-20vw);
         }to{
             opacity: 1;
-            transform: translate(-8vw);
+            transform: translate(-10vw);
         }
     }
     @keyframes icondisappear {
         from{
             opacity: 1;
-            transform: translate(-8vw);
+            transform: translate(-10vw);
         }to{
             opacity: 0;
-            transform: translate(-8vw);
+            transform: translate(-10vw);
         }
     }
     @keyframes iconappear2 {
         from{
             opacity: 0;
-            transform: translate(-17vw);
+            transform: translate(-30vw);
         }to{
             opacity: 1;
-            transform: translate(-15vw);
+            transform: translate(-20vw);
         }
     }
     @keyframes icondisappear2 {
         from{
             opacity: 1;
-            transform: translate(-15vw);
+            transform: translate(-20vw);
         }to{
             opacity: 0;
-            transform: translate(-15vw);
+            transform: translate(-20vw);
         }
     }
   }
 /************************************************************320px*************************************************************/
-@media only screen and (min-width:428px) and (max-width:601px){
+@media only screen and (max-width:429px){
     .edu_background{
         display: flex;
         flex-direction: column;
@@ -1977,7 +1973,7 @@
     }
   }
   /************************************************************320px*************************************************************/
-  @media only screen and (min-width:414px) and (max-width:428px){
+  @media only screen and (max-width:415px){
     .edu_background{
         display: flex;
         flex-direction: column;
@@ -2635,7 +2631,7 @@
     }
   }
   /************************************************************320px*************************************************************/
-  @media only screen and (min-width:393px) and (max-width:414px){
+  @media only screen and (max-width:394px){
     .edu_background{
         display: flex;
         flex-direction: column;
@@ -3293,7 +3289,7 @@
     }
     }
   /************************************************************320px*************************************************************/
-  @media only screen and (min-width:360px) and (max-width:393px){
+  @media only screen and (max-width:361px){
     .edu_background{
         display: flex;
         flex-direction: column;
