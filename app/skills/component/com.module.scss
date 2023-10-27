@@ -1533,15 +1533,15 @@
     .backend_background{
         display: grid;
         grid-template-rows: 2fr 1fr;
-        background-color: wheat;
+        background-color: rgb(0, 0, 0);
         border-radius: 0 0 15px 15px;
         width: 100%;
         .topic_area{
-            background-color: red;
+            background-color: rgb(0, 0, 0);
             display: grid;
             grid-template-rows: 1fr 1fr;
             .topic1{
-                background-color: transparent;
+                background-color: black;
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;

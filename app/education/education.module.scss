@@ -123,6 +123,7 @@
     height: 100vh;
     background-color: black;
     left: 25vw;
+    top: 0;
     .button_area_brr{
         display: flex;
         width: 100%;
@@ -140,6 +141,7 @@
         .brr_change_image img{
             width: 35%;
             height: auto;
+            transform: scale(0.8,0.8);
         }
         .brr_change_image_back{
             display: flex; 
@@ -151,19 +153,19 @@
         .brr_change_image_back img{
             width: 35%;
             height: auto;
-            z-index: 5;
+            transform: scale(0.8,0.8);
             animation: backBrr_brrMove 650ms ease forwards;
         }.back{
             position: absolute;
             color: white;
-            transform: translateX(-8vw);
+            transform: translateX(-10vw);
             width: 5%;
             height: 5%;
             animation: iconappear 650ms ease forwards;
         }.backmove{
             position: absolute;
             color: white;
-            transform: translateX(-8vw);
+            transform: translateX(-10vw);
             width: 5%;
             height: 5%;
             animation: icondisappear 150ms ease forwards;
@@ -211,7 +213,7 @@
             transform: translateX(-15vw);
             width: 5%;
             height: 5%;
-            animation: iconappear2 650ms ease forwards;
+            animation: iconappear2 650ms ease;
         }.backmove{
             position: absolute;
             color: white;
@@ -225,7 +227,7 @@
     }
     .detail_area{
         width: 100%;
-        height: 70vh;
+        height: 55vh;
         background-color: black;
         padding: 1vh;
         color: white;
@@ -251,7 +253,7 @@
                         display: grid;
                         grid-template-rows: 1fr 2fr;
                         padding: 0.5vh;
-                        font-size: calc(1vw + 0.5vh);
+                        font-size: 2.5vh;
                     }
                     .head div{
                         display: flex;
@@ -261,7 +263,7 @@
                     .detail{
                         display: flex;
                         justify-content: center;
-                        font-size: calc(3vw - 3vh);
+                        font-size: 2.5vh;
                     }
                 }
                 .right_element{
@@ -273,7 +275,7 @@
                         display: grid;
                         grid-template-rows: 1fr 2fr;
                         padding: 0.5vh;
-                        font-size: calc(1vw + 0.5vh);
+                        font-size: 2.5vh;
                     }
                     .head div{
                         display: flex;
@@ -283,7 +285,7 @@
                     .detail{
                         display: flex;
                         justify-content: center;
-                        font-size: calc(3vw - 3vh);
+                        font-size: 2.5vh;
                     }
                 }
             }
@@ -293,23 +295,23 @@
             grid-template-columns: 1fr 1fr;
             width: 100%;
             height: 100%;
-            background-color: rgb(1, 1, 1);
-            animation: disappear 350ms ease forwards;
+            background-color: rgb(0, 0, 0);
+            animation: disappear 350ms ease-in-out forwards;
             .detail_brr_element{
                 display: grid;
                 grid-template-rows: 1fr 1fr 1fr;
                 margin: 1vh;
-                background-color: rgb(0, 0, 0);
+                background-color: black;
                 .left_element{
                     display: grid;
                     grid-template-rows: 1fr 1fr;
-                    background-color: rgb(0, 0, 0);
+                    background-color: black;
                     margin: 0.5vh;
                     .head{
                         display: grid;
                         grid-template-rows: 1fr 2fr;
                         padding: 0.5vh;
-                        font-size: calc(1vw + 0.5vh);
+                        font-size: 2.5vh;
                     }
                     .head div{
                         display: flex;
@@ -319,7 +321,7 @@
                     .detail{
                         display: flex;
                         justify-content: center;
-                        font-size: calc(3vw - 3vh);
+                        font-size: 2.5vh;
                     }
                 }
                 .right_element{
@@ -331,6 +333,7 @@
                         display: grid;
                         grid-template-rows: 1fr 2fr;
                         padding: 0.5vh;
+                        font-size: 2.5vh;
                     }
                     .head div{
                         display: flex;
@@ -340,7 +343,7 @@
                     .detail{
                         display: flex;
                         justify-content: center;
-                        font-size: calc(3vw - 3vh);
+                        font-size: 2.5vh;
                     }
                 }
             }
@@ -368,13 +371,13 @@
                         display: grid;
                         grid-template-rows: 1fr;
                         padding: 0.5vh;
-                        font-size: calc(1vw + 0.5vh);
+                        font-size: 2.5vh;
                     }
                     .head:nth-child(2){
                         display: grid;
                         grid-template-rows: 1fr 1fr;
                         padding: 0.5vh;
-                        font-size: calc(3vw - 3vh);
+                        font-size: 2.5vh;
                     }
                     .head div{
                         display: flex;
@@ -384,12 +387,12 @@
                     .detail{
                         display: flex;
                         justify-content: center;
-                        font-size: calc(3vw - 3vh);
+                        font-size: 2.5vh;
                     }
                     .detail:nth-child(2){
                         display: grid;
                         grid-template-rows: 1fr 1fr;
-                        font-size: calc(2.5vw - 2.5vh);
+                        font-size: 2.5vh;
                     }
                 }
                 
@@ -407,13 +410,13 @@
                         display: grid;
                         grid-template-rows: 1fr ;
                         padding: 0.5vh;
-                        font-size: calc(1vw + 0.5vh);
+                        font-size: 2.5vh;
                     }
                     .head:nth-child(2){
                         display: grid;
                         grid-template-rows: 1fr 1fr;
                         padding: 0.5vh;
-                        font-size: calc(3vw - 3vh);
+                        font-size: 2.5vh;
                     }
                     .head div{
                         display: flex;
@@ -423,7 +426,7 @@
                     .detail{
                         display: flex;
                         justify-content: center;
-                        font-size: calc(3vw - 3vh);
+                        font-size: 2.5vh;
                     }
                     
                 }.right_element:nth-child(2){
@@ -441,7 +444,7 @@
                         display: grid;
                         grid-template-rows: 1fr 1fr;
                         background-color: rgb(0, 0, 0);
-                        font-size: calc(2vw - 2vh);
+                        font-size: 2.5vh;
                     }
                 }
             }
@@ -469,7 +472,7 @@
                         display: grid;
                         grid-template-rows: 1fr;
                         padding: 0.5vh;
-                        font-size: calc(1vw + 0.5vh);
+                        font-size: 2.5vh;
                     }
                     .head:nth-child(2){
                         display: grid;
@@ -485,12 +488,12 @@
                     .detail{
                         display: flex;
                         justify-content: center;
-                        font-size: calc(3vw - 3vh);
+                        font-size: 2.5vh;
                     }
                     .detail:nth-child(2){
                         display: grid;
                         grid-template-rows: 1fr 1fr;
-                        font-size: calc(2.5vw - 2.5vh);
+                        font-size: 2.5vh;
                     }
                 }
                 
@@ -502,13 +505,13 @@
                 .right_element{
                     display: grid;
                     grid-template-rows: 1fr 1fr;
-                    background-color: rgb(3, 2, 2);
+                    background-color: rgb(0, 0, 0);
                     margin: 0.5vh;
                     .head{
                         display: grid;
                         grid-template-rows: 1fr ;
                         padding: 0.5vh;
-                        font-size: calc(1vw + 0.5vh);
+                        font-size: 2.5vh;
                     }
                     .head:nth-child(2){
                         display: grid;
@@ -524,13 +527,13 @@
                     .detail{
                         display: flex;
                         justify-content: center;
-                        font-size: calc(3vw - 3vh);
+                        font-size: 2.5vh;
                     }
                     
                 }.right_element:nth-child(2){
                     display: grid;
                     grid-template-rows: 1fr 2fr;
-                    background-color: rgb(6, 5, 5);
+                    background-color: rgb(0, 0, 0);
                     margin: 0.5vh;
                     .head{
                         display: grid;
@@ -543,7 +546,7 @@
                         display: grid;
                         grid-template-rows: 1fr 1fr;
                         background-color: rgb(0, 0, 0);
-                        font-size: calc(2vw - 2vh);
+                        font-size: 2.5vh;
                     }
                 }
             }
@@ -559,7 +562,7 @@
     from{
         transform: rotate(0deg)translate(0,0);
     }to{
-        transform: rotate(90deg)translate(-35vh,-18.75vw)rotate(-90deg);
+        transform: rotate(90deg)translate(-35vh,-18.75vw)rotate(-90deg)scale(0.8,0.8);
     }
 }
 @keyframes brr_kmitlMove {
@@ -592,7 +595,7 @@
 }
 @keyframes backBrr_brrMove {
     from{
-        transform: rotate(90deg)rotate(-90deg);
+        transform: rotate(90deg)rotate(-90deg) ;
     }to{
         transform: rotate(0deg)translate(-18.8vw,35vh);
         display: none;
@@ -741,7 +744,7 @@
                 align-items: center;
                 width: 100%;
                 height: 100%;
-                background-color: rgb(5, 7, 7);
+                background-color: rgb(0, 0, 0);
             }
             .kmitl_brr_image_move img {
                 width: 35%;
@@ -1165,7 +1168,7 @@
                     .right_element{
                         display: grid;
                         grid-template-rows: 1fr 1fr;
-                        background-color: rgb(3, 2, 2);
+                        background-color: rgb(0, 0, 0);
                         margin: 0.5vh;
                         .head{
                             display: grid;
@@ -1193,7 +1196,7 @@
                     }.right_element:nth-child(2){
                         display: grid;
                         grid-template-rows: 1fr 2fr;
-                        background-color: rgb(6, 5, 5);
+                        background-color: rgb(0, 0, 0);
                         margin: 0.5vh;
                         .head{
                             display: grid;
@@ -1399,7 +1402,7 @@
                 align-items: center;
                 width: 100%;
                 height: 100%;
-                background-color: rgb(5, 7, 7);
+                background-color: rgb(0, 0, 0);
             }
             .kmitl_brr_image_move img {
                 width: 35%;
@@ -1823,7 +1826,7 @@
                     .right_element{
                         display: grid;
                         grid-template-rows: 1fr 1fr;
-                        background-color: rgb(3, 2, 2);
+                        background-color: rgb(0, 0, 0);
                         margin: 0.5vh;
                         .head{
                             display: grid;
@@ -1851,7 +1854,7 @@
                     }.right_element:nth-child(2){
                         display: grid;
                         grid-template-rows: 1fr 2fr;
-                        background-color: rgb(6, 5, 5);
+                        background-color: rgb(0, 0, 0);
                         margin: 0.5vh;
                         .head{
                             display: grid;
@@ -2057,7 +2060,7 @@
                 align-items: center;
                 width: 100%;
                 height: 100%;
-                background-color: rgb(5, 7, 7);
+                background-color: rgb(0, 0, 0);
             }
             .kmitl_brr_image_move img {
                 width: 35%;
@@ -2481,7 +2484,7 @@
                     .right_element{
                         display: grid;
                         grid-template-rows: 1fr 1fr;
-                        background-color: rgb(3, 2, 2);
+                        background-color: rgb(0, 0, 0);
                         margin: 0.5vh;
                         .head{
                             display: grid;
@@ -2509,7 +2512,7 @@
                     }.right_element:nth-child(2){
                         display: grid;
                         grid-template-rows: 1fr 2fr;
-                        background-color: rgb(6, 5, 5);
+                        background-color: rgb(0, 0, 0);
                         margin: 0.5vh;
                         .head{
                             display: grid;
@@ -2715,7 +2718,7 @@
                 align-items: center;
                 width: 100%;
                 height: 100%;
-                background-color: rgb(5, 7, 7);
+                background-color: rgb(0, 0, 0);
             }
             .kmitl_brr_image_move img {
                 width: 35%;
@@ -3139,7 +3142,7 @@
                     .right_element{
                         display: grid;
                         grid-template-rows: 1fr 1fr;
-                        background-color: rgb(3, 2, 2);
+                        background-color: rgb(0, 0, 0);
                         margin: 0.5vh;
                         .head{
                             display: grid;
@@ -3167,7 +3170,7 @@
                     }.right_element:nth-child(2){
                         display: grid;
                         grid-template-rows: 1fr 2fr;
-                        background-color: rgb(6, 5, 5);
+                        background-color: rgb(0, 0, 0);
                         margin: 0.5vh;
                         .head{
                             display: grid;
@@ -3373,7 +3376,7 @@
                 align-items: center;
                 width: 100%;
                 height: 100%;
-                background-color: rgb(5, 7, 7);
+                background-color: rgb(0, 0, 0);
             }
             .kmitl_brr_image_move img {
                 width: 35%;
@@ -3797,7 +3800,7 @@
                     .right_element{
                         display: grid;
                         grid-template-rows: 1fr 1fr;
-                        background-color: rgb(3, 2, 2);
+                        background-color: rgb(0, 0, 0);
                         margin: 0.5vh;
                         .head{
                             display: grid;
@@ -3825,7 +3828,7 @@
                     }.right_element:nth-child(2){
                         display: grid;
                         grid-template-rows: 1fr 2fr;
-                        background-color: rgb(6, 5, 5);
+                        background-color: rgb(0, 0, 0);
                         margin: 0.5vh;
                         .head{
                             display: grid;
